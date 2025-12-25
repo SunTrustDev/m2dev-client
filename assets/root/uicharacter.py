@@ -533,7 +533,7 @@ class CharacterWindow(ui.ScriptWindow):
 		except:
 			#import exception
 			#exception.Abort("CharacterWindow.RefreshStatus.BindObject")
-			## ������ ƨ�� ����
+			## 쐻猷욎굲쐻猷욎굲쐻猷욎굲 뮊쐻猷욎굲 쐻猷욎굲쐻猷욎굲
 			pass
 
 		self.__RefreshStatusPlusButtonList()
@@ -807,7 +807,7 @@ class CharacterWindow(ui.ScriptWindow):
 			skillLevel = getSkillLevel(slotIndex)
 			skillType = getSkillType(skillIndex)
 
-			## �¸� ��ų ���� ó��
+			## 쐻뱟筌뤿슣굲 쐻猷욎굲沅 쐻猷욎굲쐻猷욎굲 筌ｌ꼪쐻猷욎굲
 			if player.SKILL_INDEX_RIDING == skillIndex:
 				if 1 == skillGrade:
 					skillLevel += 19
@@ -934,11 +934,11 @@ class CharacterWindow(ui.ScriptWindow):
 		self.RefreshSkillPlusButtonList()
 
 	def CanShowPlusButton(self, skillIndex, skillLevel, curStatPoint):
-		## ��ų�� ������
+		## 쐻猷욎굲沅쀫쐻猷욎굲 쐻猷욎굲쐻猷욎굲쐻猷욎굲
 		if 0 == skillIndex:
 			return False
 
-		## ������ ������ �����Ѵٸ�
+		## 쐻猷욎굲쐻猷욎굲쐻猷욎굲 쐻猷욎굲쐻猷욎굲쐻猷욎굲 쐻猷욎굲쐻猷욎굲쐻뼩뼄筌뤿슣굲
 		if not skill.CanLevelUpSkill(skillIndex, skillLevel):
 			return False
 
@@ -1057,8 +1057,8 @@ class CharacterWindow(ui.ScriptWindow):
 
 		mouseModule.mouseController.DeattachObject()
 
-	## FIXME : ��ų�� ��������� ���� ��ȣ�� ������ �ش� ������ ã�Ƽ� ������Ʈ �Ѵ�.
-	##         �ſ� ���ո�. ���� ��ü�� �����ؾ� �ҵ�.
+	## FIXME : 쐻猷욎굲沅쀫쐻猷욎굲 쐻猷욎굲쐻猷욎굲쐻猷욎굲쐻猷욎굲쐻 쐻猷욎굲쐻猷욎굲 쐻猷욎굲깈쐻猷욎굲 쐻猷욎굲쐻猷욎굲쐻猷욎굲 쐻솋솇굲 쐻猷욎굲쐻猷욎굲쐻猷욎굲 筌≪뼃쐻뼃닰굲 쐻猷욎굲쐻猷욎굲쐻猷욎굲뱜 쐻뼩솇굲.
+	##         쐻뻿뒻굲 쐻猷욎굲쐻솁筌뤿슣굲. 쐻猷욎굲쐻猷욎굲 쐻猷욎굲筌ｋ떣쐻猷욎굲 쐻猷욎굲쐻猷욎굲쐻솋堉뀁굲 쐻踰앹굲.
 	def OnUseSkill(self, slotIndex, coolTime):
 		skillIndex = player.GetSkillIndex(slotIndex)
 		skillType = skill.GetSkillType(skillIndex)

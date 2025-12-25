@@ -125,16 +125,16 @@ class MainStream(object):
 
 	def SetPhaseWindow(self, newPhaseWindow):
 		if self.newPhaseWindow:
-			#print "ÀÌ¹Ì »õ·Î¿î À©µµ¿ì·Î ¹Ù²Û»óÅÂ¿¡¼­ ¶Ç ¹Ù²Ş", newPhaseWindow
+			#print "ì´ë¯¸ ìƒˆë¡œìš´ ìœˆë„ìš°ë¡œ ë°”ê¾¼ìƒíƒœì—ì„œ ë˜ ë°”ê¿ˆ", newPhaseWindow
 			self.__ChangePhaseWindow()
 
 		self.newPhaseWindow=newPhaseWindow
 
 		if self.curPhaseWindow:
-			#print "ÆäÀÌµå ¾Æ¿ôµÇ¸é ¹Ù²Ş"
+			#print "í˜ì´ë“œ ì•„ì›ƒë˜ë©´ ë°”ê¿ˆ"
 			self.curtain.FadeOut(self.__ChangePhaseWindow)
 		else:
-			#print "ÇöÀç À©µµ¿ì°¡ ¾ø´Â »óÅÂ¶ó ¹Ù·Î ¹Ù²Ş"
+			#print "í˜„ì¬ ìœˆë„ìš°ê°€ ì—†ëŠ” ìƒíƒœë¼ ë°”ë¡œ ë°”ê¿ˆ"
 			self.__ChangePhaseWindow()
 
 	def __ChangePhaseWindow(self):

@@ -885,7 +885,7 @@ class ExpandedImageBox(ImageBox):
 	def SetRenderingMode(self, mode):
 		wndMgr.SetRenderingMode(self.hWnd, mode)
 
-	# [0.0, 1.0] ������ ����ŭ �ۼ�Ʈ�� �׸��� �ʴ´�.
+	# [0.0, 1.0] 쐻猷욎굲쐻猷욎굲쐻猷욎굲 쐻猷욎굲쐻猷욎굲寃 쐻솙닰굲뱜쐻猷욎굲 쐻솊筌뤿슣굲쐻猷욎굲 쐻뼏뮉솇굲.
 	def SetRenderingRect(self, left, top, right, bottom):
 		wndMgr.SetRenderingRect(self.hWnd, left, top, right, bottom)
 
@@ -1374,11 +1374,11 @@ class SlotWindow(Window):
 		return wndMgr.GetSlotCount(self.hWnd)
 
 	def SetUseMode(self, flag):
-		"True�϶��� ItemToItem �� �������� �����ش�"
+		"True쐻뼣뵛굲쐻猷욎굲 ItemToItem 쐻猷욎굲 쐻猷욎굲쐻猷욎굲쐻猷욎굲쐻猷욎굲 쐻猷욎굲쐻猷욎굲쐻솋솇굲"
 		wndMgr.SetUseMode(self.hWnd, flag)
 
 	def SetUsableItem(self, flag): 
-		"True�� ���� ����Ų �������� ItemToItem ���� �����ϴ�"
+		"True쐻猷욎굲 쐻猷욎굲쐻猷욎굲 쐻猷욎굲쐻猷욎굲沅 쐻猷욎굲쐻猷욎굲쐻猷욎굲쐻猷욎굲 ItemToItem 쐻猷욎굲쐻猷욎굲 쐻猷욎굲쐻猷욎굲쐻뼣솇굲"
 		wndMgr.SetUsableItem(self.hWnd, flag)
 
 	## Slot
@@ -1548,7 +1548,7 @@ class TitleBar(Window):
 
 	def MakeTitleBar(self, width, color):
 
-		## ���� Color�� ����ϰ� ���� ����
+		## 쐻猷욎굲쐻猷욎굲 Color쐻猷욎굲 쐻猷욎굲쐻猷욎굲癲낅뿥쐻 쐻猷욎굲쐻猷욎굲 쐻猷욎굲쐻猷욎굲
 
 		width = max(64, width)
 
@@ -2779,8 +2779,8 @@ class PythonScriptLoader(object):
 		print "===== Load Script File : %s" % (FileName)
 
 		try:
-			# chr, player ���� sandbox ������ import�� ������ �ʱ� ������,(���� �ǿ��� ������ �ſ� ŭ.)
-			#  �̸� script dictionary�� �ʿ��� ����� �־���´�.
+			# chr, player 쐻猷욎굲쐻猷욎굲 sandbox 쐻猷욎굲쐻猷욎굲쐻猷욎굲 import쐻猷욎굲 쐻猷욎굲쐻猷욎굲쐻猷욎굲 쐻뼏繹먮씮굲 쐻猷욎굲쐻猷욎굲쐻猷욎굲,(쐻猷욎굲쐻猷욎굲 쐻뼄뒻굲쐻猷욎굲 쐻猷욎굲쐻猷욎굲쐻猷욎굲 쐻뻿뒻굲 寃.)
+			#  쐻뼓筌뤿슣굲 script dictionary쐻猷욎굲 쐻뼏뒻굲쐻猷욎굲 쐻猷욎굲쐻猷욎굲쐻 쐻솂堉뀁굲쐻猷욎굲鸚룸뛼쐻.
 			import chr
 			import player
 			import app

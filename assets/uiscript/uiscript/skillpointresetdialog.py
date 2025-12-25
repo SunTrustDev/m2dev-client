@@ -31,7 +31,7 @@ window = {
 					"x" : 10,
 					"y" : 17,
 
-					"text" : "½ºÅ³Æ÷ÀÎÆ® ¸®¼Â",
+					"text" : "ìŠ¤í‚¬í¬ì¸íŠ¸ ë¦¬ì…‹",
 
 					"default_image" : ROOT + "XLarge_Button_01.sub",
 					"over_image" : ROOT + "XLarge_Button_02.sub",
@@ -45,7 +45,7 @@ window = {
 					"x" : 10,
 					"y" : 57,
 
-					"text" : "Ãë¼Ò",
+					"text" : "ì·¨ì†Œ",
 
 					"default_image" : ROOT + "XLarge_Button_01.sub",
 					"over_image" : ROOT + "XLarge_Button_02.sub",

@@ -20,9 +20,9 @@ class AuctionWindow(ui.ScriptWindow):
 		pyScrLoader.LoadScriptFile(self, "uiscript/auctionwindow.py")
 
 		self.pageName = {
-			"LIST"				: "¸Å¸Å ¸®½ºÆ®",
-			"REGISTER"			: "¸Å¸Å µî·Ï",
-			"UNIQUE_AUCTION"	: "À¯´ÏÅ© °æ¸Å",
+			"LIST"				: "ë§¤ë§¤ ë¦¬ìŠ¤íŠ¸",
+			"REGISTER"			: "ë§¤ë§¤ ë“±ë¡",
+			"UNIQUE_AUCTION"	: "ìœ ë‹ˆí¬ ê²½ë§¤",
 		}
 		self.pageWindow = {
 			"LIST"				: self.PageWindow(self, "uiscript/auctionwindow_listpage.py"),
@@ -84,7 +84,7 @@ class AuctionWindow(ui.ScriptWindow):
 			deleteButton.SetUpVisual("d:/ymir work/ui/public/small_button_01.sub")
 			deleteButton.SetOverVisual("d:/ymir work/ui/public/small_button_02.sub")
 			deleteButton.SetDownVisual("d:/ymir work/ui/public/small_button_03.sub")
-			deleteButton.SetText("±¸ÀÔ")
+			deleteButton.SetText("êµ¬ì…")
 			deleteButton.Show()
 			page.Children.append(deleteButton)
 
@@ -109,19 +109,19 @@ class AuctionWindow(ui.ScriptWindow):
 			itemName = ui.MakeTextLine(page, False, 117, yPos + 14)
 			page.Children.append(itemName)
 			## Temporary
-			itemName.SetText("¼±³àÀÇ ºñ³à")
+			itemName.SetText("ì„ ë…€ì˜ ë¹„ë…€")
 			## Temporary
 
 			curPrice = ui.MakeTextLine(page, False, 117, yPos + 31)
 			page.Children.append(curPrice)
 			## Temporary
-			curPrice.SetText("ÇöÀç°¡ : 20¾ï 1234¸¸ 1234³É")
+			curPrice.SetText("í˜„ì¬ê°€ : 20ì–µ 1234ë§Œ 1234ëƒ¥")
 			## Temporary
 
 			lastTime = ui.MakeTextLine(page, False, 117, yPos + 48)
 			page.Children.append(lastTime)
 			## Temporary
-			lastTime.SetText("³«Âû±îÁö ³²Àº ½Ã°£ : 19ºĞ 28ÃÊ")
+			lastTime.SetText("ë‚™ì°°ê¹Œì§€ ë‚¨ì€ ì‹œê°„ : 19ë¶„ 28ì´ˆ")
 			## Temporary
 
 			priceSlotImage = ui.MakeImageBox(page, "d:/ymir work/ui/public/Parameter_Slot_05.sub", 117, yPos + 65)
@@ -129,7 +129,7 @@ class AuctionWindow(ui.ScriptWindow):
 			page.Children.append(priceSlotImage)
 			page.Children.append(priceSlot)
 			## Temporary
-			priceSlot.SetText("20¾ï 1234¸¸ 1234³É")
+			priceSlot.SetText("20ì–µ 1234ë§Œ 1234ëƒ¥")
 			## Temporary
 
 	def SelectPage(self, arg):

@@ -176,7 +176,7 @@ class MapNameShower(ui.ExpandedImageBox):
 			self.floorImage.SetPosition(100, 80)
 			self.floorImage.SetAlpha(0.0)
 			self.floorImage.Show()
-			# ¸ÊÀÌ¸§ (ex: ¾Æ±Íµ¿±¼) ÀÌ¹ÌÁö ·Îµù & Ç¥½Ã			
+			# ë§µì´ë¦„ (ex: ì•„ê·€ë™êµ´) ì´ë¯¸ì§€ ë¡œë”© & í‘œì‹œ			
 			try:
 				floor = self.__GetDevilTowerFloor(x, y)
 				print x, y, floor
@@ -194,8 +194,8 @@ class MapNameShower(ui.ExpandedImageBox):
 				self.objectiveImage.SetAlpha(0.0)
 				self.objectiveImage.Show()
 			
-				# Ãşº° ¸ñÇ¥ ÀÌ¹ÌÁö ·Îµù & Ç¥½Ã
-				# ´øÀüÀº ÇöÀç ¸îÃşÀÎÁö ¾Ë¾Æ¿À´Â ºÎºĞ ¶§¹®¿¡ ÇÏµåÄÚµùÀ» ÇÇÇÏ±â°¡ Èûµé´Ù...
+				# ì¸µë³„ ëª©í‘œ ì´ë¯¸ì§€ ë¡œë”© & í‘œì‹œ
+				# ë˜ì „ì€ í˜„ì¬ ëª‡ì¸µì¸ì§€ ì•Œì•„ì˜¤ëŠ” ë¶€ë¶„ ë•Œë¬¸ì— í•˜ë“œì½”ë”©ì„ í”¼í•˜ê¸°ê°€ í˜ë“¤ë‹¤...
 				try:
 					floor = self.__GetDevilTowerFloor(x, y)
 					print x, y, floor
@@ -215,7 +215,7 @@ class MapNameShower(ui.ExpandedImageBox):
 			self.floorImage.SetAlpha(0.0)
 			self.floorImage.Show()
 
-			# ¸ÊÀÌ¸§ (ex: ¾Æ±Íµ¿±¼) ÀÌ¹ÌÁö ·Îµù & Ç¥½Ã
+			# ë§µì´ë¦„ (ex: ì•„ê·€ë™êµ´) ì´ë¯¸ì§€ ë¡œë”© & í‘œì‹œ
 			try:
 				floor = self.__GetDevilBase(x, y)
 				print x, y, floor
@@ -233,8 +233,8 @@ class MapNameShower(ui.ExpandedImageBox):
 				self.objectiveImage.Show()
 				
 
-				# Ãşº° ¸ñÇ¥ ÀÌ¹ÌÁö ·Îµù & Ç¥½Ã
-				# ´øÀüÀº ÇöÀç ¸îÃşÀÎÁö ¾Ë¾Æ¿À´Â ºÎºĞ ¶§¹®¿¡ ÇÏµåÄÚµùÀ» ÇÇÇÏ±â°¡ Èûµé´Ù...
+				# ì¸µë³„ ëª©í‘œ ì´ë¯¸ì§€ ë¡œë”© & í‘œì‹œ
+				# ë˜ì „ì€ í˜„ì¬ ëª‡ì¸µì¸ì§€ ì•Œì•„ì˜¤ëŠ” ë¶€ë¶„ ë•Œë¬¸ì— í•˜ë“œì½”ë”©ì„ í”¼í•˜ê¸°ê°€ í˜ë“¤ë‹¤...
 				try:
 					floor = self.__GetDevilBase(x, y)
 					print x, y, floor

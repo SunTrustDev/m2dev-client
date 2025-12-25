@@ -152,7 +152,7 @@ class EnergyBar(ui.ScriptWindow):
 	def RefreshStatus(self):
 		pointEnergy = player.GetStatus (player.ENERGY)
 		leftTimeEnergy = player.GetStatus (player.ENERGY_END_TIME) - app.GetGlobalTimeStamp()
-		# ���ȯ ���� �ð� = 2�ð�.
+		# 쐻猷욎굲쐻뼍 쐻猷욎굲쐻猷욎굲 쐻뻻ⓦ끉굲 = 2쐻뻻ⓦ끉굲.
 		self.SetEnergy (pointEnergy, leftTimeEnergy, 7200)
 			
 	def SetEnergy (self, point, leftTime, maxTime):
@@ -331,12 +331,12 @@ class TaskBar(ui.ScriptWindow):
 			self.SetSkillSlotNew(slotNumber, skillIndex, skillGrade, skillLevel)
 			self.SetSlotCountNew(slotNumber, skillGrade, skillLevel)
 
-			## NOTE : CoolTime üũ
+			## NOTE : CoolTime 筌ｋ똾寃
 			if player.IsSkillCoolTime(skillSlotNumber):
 				(coolTime, elapsedTime) = player.GetSkillCoolTime(skillSlotNumber)
 				self.SetSlotCoolTime(slotNumber, coolTime, elapsedTime)
 
-			## NOTE : Activate �Ǿ� �ִٸ� �����ܵ� ������Ʈ
+			## NOTE : Activate 쐻뼄堉뀁굲 쐻솂뼄筌뤿슣굲 쐻猷욎굲쐻猷욎굲쐻솦踰앹굲 쐻猷욎굲쐻猷욎굲쐻猷욎굲뱜
 			if player.IsSkillActive(skillSlotNumber):
 				self.ActivateSlot(slotNumber)
 
@@ -439,7 +439,7 @@ class TaskBar(ui.ScriptWindow):
 		toggleButtonDict[TaskBar.BUTTON_MESSENGER]=self.GetChild("MessengerButton")
 		toggleButtonDict[TaskBar.BUTTON_SYSTEM]=self.GetChild("SystemButton")
 		
-		# ChatButton, ExpandButton �� �� �ϳ��� �ݵ�� �����Ѵ�.
+		# ChatButton, ExpandButton 쐻猷욎굲 쐻猷욎굲 쐻뼣꺋굲쐻猷욎굲 쐻솧踰앹굲쐻 쐻猷욎굲쐻猷욎굲쐻뼩솇굲.
 		try:
 			toggleButtonDict[TaskBar.BUTTON_CHAT]=self.GetChild("ChatButton")
 		except:
@@ -781,9 +781,9 @@ class TaskBar(ui.ScriptWindow):
 					if itemCount <= 1:
 						itemCount = 0
 					
-					## �ڵ����� (#72723, #72724) Ư��ó�� - �������ε��� ���Կ� Ȱ��ȭ/��Ȱ��ȭ ǥ�ø� ���� �۾��� - [hyo]
+					## 쐻솓踰앹굲쐻猷욎굲쐻猷욎굲 (#72723, #72724) 뱟쐻猷욎굲筌ｌ꼪쐻猷욎굲 - 쐻猷욎굲쐻猷욎굲쐻猷욎굲쐻뼢踰앹굲쐻猷욎굲 쐻猷욎굲쐻셾뒻굲 넞쐻猷욎굲넅/쐻猷욎굲넞쐻猷욎굲넅 紐대쐻뻻筌뤿슣굲 쐻猷욎굲쐻猷욎굲 쐻솙堉뀁굲쐻猷욎굲 - [hyo]
 					if constInfo.IS_AUTO_POTION(itemIndex):
-						# metinSocket - [0] : Ȱ��ȭ ����, [1] : ����� ��, [2] : �ִ� �뷮
+						# metinSocket - [0] : 넞쐻猷욎굲넅 쐻猷욎굲쐻猷욎굲, [1] : 쐻猷욎굲쐻猷욎굲쐻 쐻猷욎굲, [2] : 쐻솂솇굲 쐻윥쎗
 						metinSocket = [player.GetItemMetinSocket(Position, j) for j in xrange(player.METIN_SOCKET_MAX_NUM)]
 						
 						if 0 != int(metinSocket[0]):
@@ -816,7 +816,7 @@ class TaskBar(ui.ScriptWindow):
 					slot.SetSlotCountNew(slotNumber, skillGrade, skillLevel)
 					slot.SetCoverButton(slotNumber)
 
-					## NOTE : CoolTime üũ
+					## NOTE : CoolTime 筌ｋ똾寃
 					if player.IsSkillCoolTime(Position) and skillLevel > 0:
 						(coolTime, elapsedTime) = player.GetSkillCoolTime(Position)
 
@@ -825,7 +825,7 @@ class TaskBar(ui.ScriptWindow):
 						if skillType != skill.SKILL_TYPE_GUILD and skillLevel <= 0:
 							slot.SetSlotCoolTime(slotNumber, 0, 0)
 
-					## NOTE : Activate �Ǿ� �ִٸ� �����ܵ� ������Ʈ
+					## NOTE : Activate 쐻뼄堉뀁굲 쐻솂뼄筌뤿슣굲 쐻猷욎굲쐻猷욎굲쐻솦踰앹굲 쐻猷욎굲쐻猷욎굲쐻猷욎굲뱜
 					if player.IsSkillActive(Position):
 						slot.ActivateSlot(slotNumber)
 					else:
@@ -1071,8 +1071,8 @@ class TaskBar(ui.ScriptWindow):
 				if skill.IsStandingSkill(skillIndex):
 					continue
 
-				## FIXME : ��ų �ϳ��� ���� �ϳ��� �Ҵ��ϴ°� �ƹ��� ���� ���ϰ� ũ��.
-				##		 �� �κ��� �ð��� ���� ��ġ����. - [levites]
+				## FIXME : 쐻猷욎굲沅 쐻뼣꺋굲쐻猷욎굲 쐻猷욎굲쐻猷욎굲 쐻뼣꺋굲쐻猷욎굲 쐻솇굲쐻뼣뮉ⓦ끉굲 쐻뼃獄袁⑹굲쐻猷욎굲 쐻猷욎굲쐻猷욎굲 쐻猷욎굲쐻뼣ⓦ끉굲 寃뺣쐻猷욎굲.
+				##		 쐻猷욎굲 쐻뼢뇡빘굲쐻猷욎굲 쐻뻻ⓦ끉굲쐻猷욎굲 쐻猷욎굲쐻猷욎굲 쐻猷욎굲燁살꼪쐻猷욎굲쐻猷욎굲. - [levites]
 				skillButton = self.SkillButton()
 				skillButton.SetSkill(startNumber+i)
 				skillButton.SetPosition(x, y)

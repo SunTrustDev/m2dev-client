@@ -16,7 +16,7 @@ import systemSetting
 import localeInfo
 
 ## Mouse Controler
-## ¸¶¿ì½º Ä¿¼­¸¦ Á¦¾îÇÏ¸ç ¸¶¿ì½º Ä¿¼­¿¡ AttachµÇ¾î ¿òÁ÷ÀÌ´Â Objectµé±îÁö Á¦¾îÇÒ ¼ö ÀÖ´Ù.
+## ë§ˆìš°ìŠ¤ ì»¤ì„œë¥¼ ì œì–´í•˜ë©° ë§ˆìš°ìŠ¤ ì»¤ì„œì— Attachë˜ì–´ ì›€ì§ì´ëŠ” Objectë“¤ê¹Œì§€ ì œì–´í•  ìˆ˜ ìˆë‹¤.
 
 class CursorImage(object):
 	def __init__(self):
@@ -157,7 +157,7 @@ class CMouseController(object):
 				self.curCursorImage = self.cursorDict[app.NORMAL]
 
 		except KeyError:
-			dbg.TraceError("mouseModule.MouseController.SetCursor - Àß¸øµÈ Ä¿¼­ ¹øÈ£ [%d]" % cursorNum)
+			dbg.TraceError("mouseModule.MouseController.SetCursor - ì˜ëª»ëœ ì»¤ì„œ ë²ˆí˜¸ [%d]" % cursorNum)
 			self.curCursorName = app.NORMAL
 			self.curCursorImage = self.cursorDict[app.NORMAL]
 

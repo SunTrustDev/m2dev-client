@@ -1,66 +1,66 @@
-1	WARRIOR	����ն	���ն	��Х����	���������ٶ�����������Σ���ǰ��������ɾ޴��˺�	ǰ����Χ��������				ATTACK_SKILL|NEED_TARGET|WEAPON_LIMITATION	SWORD|TWO_HANDED	samyeon	4	34	64			�ܹ����� %.0f-%.0f	(1.1*MinATK + (0.3*MinATK + 0.5*STR + MinWEP)*SkillPoint) * 3	(1.1*MaxATK + (0.3*MaxATK + 0.5*STR + MaxWEP)*SkillPoint) * 3								
-2	WARRIOR	������	����ն	��������	��������ע�ڽ����ϣ�����ת�ķ�ʽ������Χ�ĵ��ˣ������˺�	ǰ����Χ����				ATTACK_SKILL|CAN_CHANGE_DIRECTION|WEAPON_LIMITATION	SWORD|TWO_HANDED	palbang	16	46	76			������ %.0f-%.0f	3*MinATK + (0.8*MinATK + 2*STR + 2*DEX + 3*MinWEP) * SkillPoint	3*MaxATK + (0.8*MaxATK + 2*STR + 2*DEX + 3*MaxWEP) * SkillPoint								
-3	WARRIOR	ս��	���ŭ	�Ƹ�����	��Ϊ��ʿ������������Ϊ�������������µĹ�����	��߹����ٶ�	�����ƶ��ٶ�	�ܹ����˺�		STANDING_SKILL		jeongwi	12	42	72			�����ٶ� +%.0f%%	50 * SkillPoint		�ƶ��ٶ� +%.0f%%	20 * SkillPoint		�ܹ����˺� %.0f%%	80 * SkillPoint			
-4	WARRIOR	����	���Ľ�	������һ	��������ע������֮�Ϸ��Ӽ����������������µ��˺�	ֻ�����ڽ�������				STANDING_SKILL|WEAPON_LIMITATION	SWORD|TWO_HANDED	geomgyeong	7	37	67			������ +%.0f	(100 + STR) * SkillPoint									
-5	WARRIOR	��ɱ	����	ʯ���쾪	ʹ�ü�ʵ�����壬���ٿ������˲��ͻ��Է��������޴��˺�	ͻ����Χ����				ATTACK_SKILL|CHARGE_ATTACK|NEED_TARGET|WEAPON_LIMITATION	SWORD|TWO_HANDED	tanhwan	11	41	71			������ %.0f-%.0f	2*MinATK + (MinATK + 2*DEX + 4*STR + 3*MinWEP)*SkillPoint	2*MaxATK + (MaxATK + 2*DEX + 4*STR + 3*MaxWEP)*SkillPoint								
-16	WARRIOR	ƮҶն	���²�	�˷�ҹ��	Ʈҷһ����ٻ���һ�����⣬������˺��	ǰ����Χ����				ATTACK_SKILL|CAN_CHANGE_DIRECTION|NEED_TARGET|WEAPON_LIMITATION	SWORD|TWO_HANDED	gigongcham	5	35	65			������ %.0f-%.0f	2.3*MinATK + (MinATK*4 + STR + 3*MinWEP + CON)*SkillPoint	2.3*MaxATK + (MaxATK*4 + STR + 3*MaxWEP + CON)*SkillPoint								
-17	WARRIOR	��ն	��Ծ	�������	��ȫ��֮���ڱ����ϣ��߸�Ծ������ǰ����ʹ�����ܵ����ҵĹ���	ֱ�߷�Χ����				ATTACK_SKILL|CAN_CHANGE_DIRECTION|WEAPON_LIMITATION	SWORD|TWO_HANDED	gyeoksan	3	33	63			������ %.0f-%.0f	2.3*MinATK + (3*MinATK + 2*STR + 2*MinWEP + 3*CON)*SkillPoint	2.3*MaxATK + (3*MaxATK + 2*STR + 2*MaxWEP + 3*CON)*SkillPoint								
-18	WARRIOR	��	ʨ��	�̹�����	�������������������޴�����������Χ��������˺���ͬʱ���������	ԭ�ط�Χ����	һ�����ʲ������ε�Ч��			ATTACK_SKILL|STANDING_SKILL		daejin	1	31	61			������ %.0f-%.0f	2*MinATK + (2*MinATK + DEX + CON + 2*STR + 3*MinWEP)*SkillPoint	2*MaxATK + (2*MaxATK + DEX + CON + 2*STR + 3*MaxWEP)*SkillPoint	�λ����� %.0f%%	(100 + 1000*SkillPoint/6)/10						
-19	WARRIOR	ǧ��׹	������	��������	˲������������������һ���ȼ�������̩ɽ���κ����ҵĹ������޷����򵹡�	����������	�����ƶ��ٶ�			STANDING_SKILL		cheongeun	10	40	70			������ : +%.0f	7+(40 + 0.2*str + 0.5*con)*k		�ƶ��ٶ� : -%.0f	1 + 9*SkillPoint						
-20	WARRIOR	����	ն����	��������	���ٻӶ�������������ǿ�����������Ѹ�ײ����ڶ�֮�ƴ������	Զ�̹���	�ܱ߷�Χ����	����Ч��	���ɵ���	ATTACK_SKILL|CAN_CHANGE_DIRECTION|WEAPON_LIMITATION	SWORD|TWO_HANDED	geompung	17	47	77			������ %.0f-%.0f	2*minatk + (minatk + 3*(dex + str + MinWEP))*k	2*maxatk + (maxatk + 3*(dex + str + MaxWEP))*k	�λ����� %.0f	(100+k*1000/6)/10						
-31	ASSASSIN	��Ϯ	����	��������	�����Լ������٣��������˱��󣬸�������һ���������˺�	��͵Ϯʱ����������	����ʱ����			ATTACK_SKILL|MELEE_ATTACK|NEED_TARGET|WEAPON_LIMITATION	DAGGER|DOUBLE_SWORD|SWORD	amseup	2	32	62			������ : %.0f-%.0f	minatk + (minatk + 500 + 2*(dex + str + 1.5*MinWEP))*k	maxatk + (maxatk + 700 + 2*(dex + str + 1.5*MaxWEP))*k								
-32	ASSASSIN	��Ӱ	��Ӱ��	��Ӱ��ħ	ƾ�����������֣����ٽӽ����˲����Է�������һ��������ʤ��	˲���ƶ�����	����ʱ����			ATTACK_SKILL|NEED_TARGET|WEAPON_LIMITATION	DAGGER|DOUBLE_SWORD|SWORD	gungsin	0	30	60			������ %.0f-%.0f	(minatk + (1.6*minatk + 200 + 3*(dex + str + 1.5*MinWEP))*k)	(maxatk + (1.6*maxatk + 200 + 3*(dex + str + 1.5*MaxWEP))*k)								
-33	ASSASSIN	Ǭ����	����ն	���귭��	��ת���Σ��Կ�����ת�Ĺ�����ʽ�������ˣ�ͬʱ�������ѡ�	����ʱ��Χ����	����������			ATTACK_SKILL|CAN_CHANGE_DIRECTION|WEAPON_LIMITATION	DAGGER|DOUBLE_SWORD|SWORD	charyun	6	36	66			������ %.0f-%.0f	2*minatk + (0.5*minatk + dex*7 + str*5 + MinWEP*3)*k	2*maxatk + (0.5*maxatk + dex*7 + str*5 + MaxWEP*3)*k	�ж����� %.0f%%	1 + 4*k						
-34	ASSASSIN	����	ǧ����	�������	�����Լ������Σ�������޷���������ӷ��ӱ��󹥻�������	����ʱ���				STANDING_SKILL		eunhyeong	8	38	68			׷���˺�ֵ : +%.0f%%	50 * SkillPoint									
-35	ASSASSIN	����	������	��ɳ��Ӱ	���Լ���Χ����һƬŨ�ܵĶ������κο������ĵ��˶������ܵ�������Ϯ	Զ�̹���	�ܱ߷�Χ����	����������		ATTACK_SKILL|NEED_TARGET		sangong	13	43	73			������ %.0f-%.0f	lv*2+(2*minatk + str*3 + dex*14)*k	lv*2+(2*maxatk + str*3 + dex*14)*k	�ж����� %.0f%%	40*k		�ж�ʱ�� %.0f��	5+25*k			
-46	ASSASSIN	����	���ռ�	���᳤��	�ۼ���������������ͬһ����������������֧�����޴���������������˺�	Զ�̹���	��ι���			ATTACK_SKILL|NEED_TARGET|WEAPON_LIMITATION	BOW	yeonsa	1	31	61		2 + floor(6 * SkillPoint)	�ܹ����� %.0f-%.0f	minatk + 0.2*minatk*floor(1+k*6)+ (0.8*minatk+(dex*4 + MinWEP)*ar) *k	maxatk + 0.2*maxatk*floor(1+k*6)+ (0.8*maxatk+(dex*4 + MaxWEP)*ar) *k	��%.0f֧��	2 + floor(6 * SkillPoint)			
-47	ASSASSIN	�Ҽ�	�����	ǧ�����	һ�������֧�������ǰ�����˲����ദ�˺���������޷����	Զ�̹���	ͬʱ�����������			ATTACK_SKILL|FAN_RANGE|NEED_TARGET|WEAPON_LIMITATION	BOW	gwangyeok	5	35	65	2 + floor(6 * SkillPoint)		������ %.0f-%0.f	minatk + (minatk + dex + str + 0.5*MinWEP)*k	maxatk + (maxatk + dex + str + 0.5*MaxWEP)*k	�����Թ���%.0f��	2 + floor(6 * SkillPoint)			
-48	ASSASSIN	ŭ��	������	��������	��ʸ�ϴ��л��棬������ǿ������������յ��˵�ͬʱ�����˺�	Զ�̹���	�ܱ߷�Χ����	���湥��		ATTACK_SKILL|NEED_TARGET|WEAPON_LIMITATION	BOW	hwajo	10	40	70			������ %.0f-%.0f	1.5*minatk + (2.3*minatk)*k	1.5*maxatk + (2.3*maxatk + 100)*k					
-49	ASSASSIN	�Ṧ	����	̤ѩ�޺�	�������࣬�ɿ��ٵ����ߣ�Զ����˵Ĺ�����	����ƶ��ٶ�				STANDING_SKILL|TOGGLE		gyeonggong	3	33	63			�ƶ��ٶ� : +%.0f	60*SkillPoint						
-50	ASSASSIN	����	ʴ�Ǽ�	׷�����	��ʸ��Ϳ�о綾�������ܽ⣬ʹ�����м���ͬʱ�ܵ�������ʴ	Զ�̹���	�ܱ߷�Χ����	���ɵ���	����������	ATTACK_SKILL|NEED_TARGET|WEAPON_LIMITATION	BOW	gigung	15	45	75			������ %.0f-%.0f	minatk + (1.2*minatk + dex*2 + str + MinWEP)*k	maxatk + (1.2*maxatk + 100 + dex*2 + str + MaxWEP)*k	�ж����� %.0f%%	80*k		�ж�ʱ�� %.0f��	15+30*k
-61	SURA	����ָ	����צ	�������	����ħָ��ǿ����������������ɽ֮��������ǿ�ҵı�ը����������	ǰ����Χ����	���ӶԷ�����Ч��	�����������˺�		ATTACK_SKILL|MELEE_ATTACK|NEED_TARGET		swaeryeong	11	41	71			������ %.0f-%.0f	minatk + 2*lv + iq*2 + (2*minatk + str*3 + iq*9 + 5*MinWEP) * k	maxatk + 2*lv + iq*2 + (2*maxatk + str*3 + iq*9 + 5*MaxWEP) * k	���ӶԷ��������� %.0f%%	1 + 9*SkillPoint			
-62	SURA	������	������	��������	����ħ�����������ٻ����ҵ������磬����Χ��ɾ޴��˺�	ԭ�ط�Χ����	���ӶԷ�����Ч��	�����������˺�		ATTACK_SKILL|STANDING_SKILL		yonggwon	16	46	76			������ %.0f-%.0f	1.1*minatk + 2*lv + 2*iq + (1.5*minatk + 3*MinWEP + iq*6) * k	1.1*maxatk + 2*lv + 2*iq + (1.5*maxatk + 3*MaxWEP + iq*6) * k	���ӶԷ����ܸ��� %.0f%%	1 + 9*SkillPoint			
-63	SURA	��ħ	ն�齣	��������	���ڰ���������ע�������У�ʹ����������������ǿ�˺�	��������������������	�����������˺�	��Ѫ����		STANDING_SKILL|TOGGLE|WEAPON_LIMITATION	SWORD	gwigeom	5	35	65			������ +%.1f	7 + (5*iq+13) * k		�� %.0f%% �˺�ֵת��������������	10*k			
-64	SURA	�־�	Ѫ��	߳����ħ	�õ��˸е����ȵĿ־壬ɥʧ������������ø��Ӵ���	���ͶԷ�������	�Է�����ʧ�ܸ�������	���˺���ʱ������		STANDING_SKILL|TOGGLE		gongpo	3	33	63			��Թ����� -%.0f%%	1 + 29*SkillPoint		ʹ�Է�����ʧ�ܸ��� %.0f%%	1 + 29*SkillPoint			
-65	SURA	����	���	��ħ����	����ħ���ĺڰ����ף�Χ�����������Լ������ֺ�	�ܵ��˺�ʱ����һ�����˺�	��߷�����	�����������˺�		STANDING_SKILL|TOGGLE		jumagap	6	36	66			������ +%.0f	(iq+30)*k		��������������� %.0f%%	(iq/4+10)*k			
-66	SURA	��ɢ	ɢԪ��	��������	��а���������������ˣ���ɢ�������ϵĸ�����ħ��	Զ�̹���	�ܱ߷�Χ����	�����Է���������		ATTACK_SKILL|NEED_TARGET		pabeop	10	40	70			ħ�������� %.0f-%.0f	40 + 5*lv + 2*iq + (18*iq + 7*minmtk + 50)*ar*k	40 + 5*lv + 2*iq + (18*iq + 7*maxmtk + 100)*ar*k	��������Ч������ %.0f%%	50*k			
-76	SURA	ħ��	��Թ	�������	�ӵ�������ȡԹ��������ɺڰ��������Է�����˺�	Զ�̹���	�Է��ܱ߹���			ATTACK_SKILL|NEED_TARGET		maryeong	1	31	61			ħ�������� : %.0f-%.0f	40 + 5*lv + 2*iq + (10*iq + 8*minmtk + 50)*ar*k	40 + 5*lv + 2*iq + (10*iq + 8*maxmtk + 100)*ar*k					
-77	SURA	������	������	ħ������	��а���ػ��ߺ������ڱ���ǿ�ҵĻ��棬������Χ�ĵ���	ԭ�ط�Χ����	���湥��			ATTACK_SKILL|STANDING_SKILL		hwayeom	17	47	77			ħ�������� : %.0f-%.0f	5*lv + 2*iq + (7*iq + 8*mtk + str*4 + con*2 + 180)*k	5*lv + 2*iq + (7*iq + 8*mtk + str*4 + con*2 + 200)*k					
-78	SURA	����	ħ��	�������	�ҳ϶�а���ħ�飬�ػ������ˣ����������п������˵ĵ���	Զ�̹���	����ѡ�񹥻�����	�ܱ߷�Χ����		ATTACK_SKILL|STANDING_SKILL|TOGGLE		muyeong	15	45	75			ħ�������� : %.0f-%.0f	30 + 2*lv + 2*iq + (9*iq + 7*minmtk + 200)*ar*k	30 + 2*lv + 2*iq + (9*iq + 7*maxmtk + 500)*ar*k					
-79	SURA	��ħ��	������	��޵���	˲�䱬���ڰ������������赲һ�е������������Ĵ���������ͬʱ�����Լ�	����ֵ��������ֵ�ܵ����˺�	��߷�����			STANDING_SKILL|TOGGLE		heuksin	2	32	62			�˺�ֵ˥���� %.0f%%	(15 + iq*0.5)*k		������ +%.0f	(0.5*iq+15)*k			
-80	SURA	����	����	�粽����	���ö�ħ���������ƴ����ľ������Ե������Ӱ�죬���ͶԷ����ƶ��ٶ�	Զ�̹���	�Է��ܱ߹���	�ƶ��ٶȼ���		ATTACK_SKILL|NEED_TARGET		tusok	9	39	69			ħ�������� : %.0f-%.0f	40 + 2*lv + 2*iq + (2*con + 2*dex + 10*iq + 8*minmtk+ 180)*ar*k	40 + 2 * lv + 2*iq + (2*con + 2*dex + 10*iq + 8*maxmtk + 200)*ar*k	�������� : %.1f%%	(333 + (300 * k))/10		����ʱ�� : %.0f	10 + (10 * SkillPoint)
-81	SURA	��ħ	Ѫ����	Ǭ����Ȼ	���Ծ�𣬽����е�а�������ۼ���һ����ɫ���ж���������Զ���ĵ���	Զ�̹���	�Է��ܱ߹���			ATTACK_SKILL|NEED_TARGET		geomhwan	7	37	67			ħ�������� %.0f-%.0f	120 + 6*lv + (5*con + 5*dex + 25*iq + 12*minmtk)*ar*k	120 + 6*lv + (5*con + 5*dex + 25*iq + 12*maxmtk)*ar*k					
-91	SHAMAN	���	��Ԫ��	�����ϼ	�ۼ���ؼ�������γ���ʹ��򣬸���Χ�ĵ�����ɾ޴�ĳ��	Զ�̹���	�ܱ߷�Χ����			ATTACK_SKILL|FAN_RANGE|NEED_TARGET		bipabu	0	30	60			ħ�������� : %.0f-%.0f	70 + 4*lv + (15*iq+5*minmtk+50)*ar*k	70 + 4*lv + (15*iq+5*maxmtk+50)*ar*k					
-92	SHAMAN	��Ӱ	����	Ǳ������	���������ı����������߸��ֳ���ֻ�����Ӱ�ӣ������Լ���ͬʱ��������	ֱ�߷�Χ����	��������Ч��			ATTACK_SKILL|NEED_TARGET		yongpa	5	35	65			ħ�������� : %.0f-%.0f	60 + 5*lv + (15*iq + 6*minmtk + 120)*ar*k	60 + 5*lv + (15*iq + 6*maxmtk + 120)*ar*k	�����������  %.0f%%	iq*0.2*k		�������湥����  %.0f	lv+5*iq *k
-93	SHAMAN	����	��Х	ǧ����β	�����ٻ�������������Ԫ���ǿ���������������е���	ԭ�ط�Χ����	��������Ч��			ATTACK_SKILL|STANDING_SKILL		paeryong	6	36	66			ħ�������� %.0f-%.0f	70 + 2*lv + (10*iq+15*minmtk+100)*ar*k	70 + 2*lv + (10*iq+15*maxmtk+100)*ar*k	����������� %.0f%%	iq*0.2*k		�������湥����  %.0f	lv+5*iq *k
-94	SHAMAN	���	���	��������	ʹ��������ɵĻ��״��м�ǿ�ķ�������ʹ���ܻ��߸��Ӱ�ȫ	�ֿ���������	��ͬ��ʹ�ÿ���			CAN_USE_FOR_ME|NEED_TARGET|ONLY_FOR_ALLIANCE		hosin	4	34	64			���������ֿ� : %.1f%%	(iq*0.3+5)*(2*k+0.5)/(k+1.5)						
-95	SHAMAN	��Ӱ��	ˮ����	�������	�羵һ��Ļ��ܱ�����ʹ���ߣ����������˵Ĺ����������˺�	������������	��ͬ��ʹ�ÿ���			CAN_USE_FOR_ME|NEED_TARGET|ONLY_FOR_ALLIANCE		boho	14	44	74			��������������� %.1f%%	5+(iq*0.3 + 5)*k						
-96	SHAMAN	����	������	����ʥ��	��������������붷־����ǿ�����Ĺ�����	��������	��ͬ��ʹ�ÿ���			CAN_USE_FOR_ME|NEED_TARGET|ONLY_FOR_ALLIANCE		gicheon	12	42	72			����������� : %.1f%%	(iq*0.3+5)*(2*k+0.5)/(k+1.5)						
-106	SHAMAN	����	������	��������	��Ů����������������������ǿ��ĵ���˺�	Զ�̹���	�ܱ߷�Χ����	�������˺�		ATTACK_SKILL|NEED_TARGET		noejeon	23	53	83			ħ�������� : %.0f-%.0f	60 + 4*lv + (3*iq+8*minmtk+iq*5)*ar*k	60 + 4*lv + (3*iq+8*maxmtk+iq*15)*ar*k					
-107	SHAMAN	����	����	��������	������ػ�������Ůǿ���֧��������ʹ�����ǿ����׵繥������	Զ�̹���	�ܱ߷�Χ����	�������˺�	����Ч��	ATTACK_SKILL|NEED_TARGET		byeorak	17	47	77			ħ�������� %.0f-%.0f	40 + 3*lv + (3*iq+12*mtk+iq*5)*ar*k	40 + 4*lv + (3*iq+12*maxmtk+iq*16)*ar*k	�λ����� %.0f%%	(50+1000*k/6)/10			
-108	SHAMAN	����	ŭ����	���׺䶥	�ɼ�һ����׵磬���ϴ����ڵ���֮�У��ɴ˲����־õĵ��˺�	Զ�̹���	������	���������ܱߵ���		ATTACK_SKILL|NEED_TARGET		pokroe	7	37	67			ħ�������� : %.0f-%.0f	(50 + 5*lv + (6*iq+6*minmtk+1)*ar*k)	(50 + 5*lv + (6*iq+6*maxmtk+800)*ar*k)					
-109	SHAMAN	��ԡ	����	�������	���֮ĸ����ʹ���߸���ľ����������ָ������������������в	�ָ�������	�ָ��쳣״̬	��ͬ��ʹ�ÿ���		CAN_USE_FOR_ME|NEED_TARGET|ONLY_FOR_ALLIANCE		jeongeop	2	32	62			�������ָ� %.0f-%.0f	200+4*lv+(10*iq+6*minmtk+600)*k	200+4*lv+(10*iq+6*maxmtk+800)*k	�ָ��쳣״̬���� %.0f%%	20+80*k			
-110	SHAMAN	Ʈ��	����	Ʈ��̤��	�˷��Ʈ����ͬ���ģ������ƶ��ٶ�	����ƶ��ٶ�	��������ʱ��	��ͬ��ʹ�ÿ���		CAN_USE_FOR_ME|NEED_TARGET|ONLY_FOR_ALLIANCE		kwaesok	9	39	69			�ƶ��ٶ� +%.0f%%	5 + (35 * k)		�ͷ��ٶ� +%.0f%%	3+33*k			
-111	SHAMAN	����	ǿ����	����ʥ��	�������ϣ�����Ǳ�ܣ���������ı���������߶Ե��˵��˺�	��߻���������	��ͬ��ʹ�ÿ���			CAN_USE_FOR_ME|NEED_TARGET|ONLY_FOR_ALLIANCE		jeungryeok	29	59	89			������ : +%.1f	5+(iq*0.2 + 15)*k						
-121	SUPPORT	ͳ˧			�����쵼������������Ч��					PASSIVE		tongsol													
-122	SUPPORT	��ʽ			������ʽ�仯�����ӹ�������					CANNOT_LEVEL_UP|TOGGLE		combo													
-123	SUPPORT	����			��ߵ��������������ײ�׽����					CANNOT_LEVEL_UP		fishing													
-124	SUPPORT	�ɿ�			�����ɿ������������ײɼ����߼���ʯ					CANNOT_LEVEL_UP|PASSIVE		mining																
-125	SUPPORT	����			�������������������������Ʒ					CANNOT_LEVEL_UP|PASSIVE		making																
-126	SUPPORT	���ı���			����ʢ�ƹ����Ե�������.					CANNOT_LEVEL_UP|PASSIVE		language1																
-127	SUPPORT	���ı���			�����ػʹ����Ե�������.					CANNOT_LEVEL_UP|PASSIVE		language2																
-128	SUPPORT	���ı���			������������Ե�������.					CANNOT_LEVEL_UP|PASSIVE		language3																
-129	SUPPORT	�û�			��ɫ�������óɹ������̬,��ӵ��һЩ���������.					CANNOT_LEVEL_UP|PASSIVE		polymorph																
-130	SUPPORT	���			����������					CANNOT_LEVEL_UP|PASSIVE		riding																
-131	SUPPORT	�ٻ�			�ٻ���ƥ							summon																10
-137	HORSE	׷��ն			�������ܲ�������Χ�ĵ���	��������				HORSE_SKILL|MOVING_SKILL|WEAPON_LIMITATION	SWORD|TWO_HANDED|DAGGER|DOUBLE_SWORD|FAN|BELL	wildattack	121	121	121												50	
-138	HORSE	�ݵ���			����ǰ�����صĵ���	��������				HORSE_SKILL|SEARCH_TARGET|CHARGE_ATTACK		charge	122	122	122												52	
-139	HORSE	������			������Χ�ĵ���	��������				HORSE_SKILL|WEAPON_LIMITATION	SWORD|TWO_HANDED|DAGGER|DOUBLE_SWORD|BOW|FAN|BELL	splash	123	123	123												55	
-140	HORSE	��Ҷ�Ҽ�			�������ص�ǰ������	��������				ATTACK_SKILL|FAN_RANGE|NEED_TARGET|HORSE_SKILL|WEAPON_LIMITATION	BOW	wildattack	121	121	121	5											50	
-151	GUILD	����			����������������ܹ����õ�ʹ�ð�Ἴ��					PASSIVE		yongan						��������� +%.0f	k * 1400									
-152	GUILD	��Ѫ			��ʱ��������Ա���������ֵ	���սר��				ONLY_FOR_GUILD_WAR		gaho	101					�������ֵ���� +%.0f%%	k * 20									
-153	GUILD	����			��ʱ��������Ա�������ֵ	���սר��				ONLY_FOR_GUILD_WAR		chukbok	102					�����ֵ���� +%.0f%%	k * 20									
-154	GUILD	����			��ʱ��������Ա�ķ�����	���սר��				ONLY_FOR_GUILD_WAR		seonghwi	103					���������� +%.1f%%	k * 10									
-155	GUILD	����			��ʱ��������Ա�Ĺ����ٶȺ��ƶ��ٶ�	���սר��				ONLY_FOR_GUILD_WAR		gasok	104					����,�ƶ��ٶ����� +%.1f%%	k * 15
-156	GUILD	��ŭ			��ʱ��������Ա��˫���˺��ĸ���	���սר��				ONLY_FOR_GUILD_WAR		bunno	105					˫���˺����� +%.0f%%	k * 50
-157	GUILD	����			��ʱ���̰���Ա�ļ����ͷ�ʱ��	���սר��				ONLY_FOR_GUILD_WAR		jumunsul	106					�ͷ��ٶ����� +%.0f%%	k * 50
+1	WARRIOR	삎졐땱	뒭뙴몾닱	뜮굝履붺뙴	븨鈺곕톪봺솕녠쐼留믪뒭떏濡レ탲源믪몜뮶塋딅슢뒘萸뱀젦紐뜣뮒源룸퉹솏쐢	萸뱀젦쐢눧臾믨퉺삎뮶				ATTACK_SKILL|NEED_TARGET|WEAPON_LIMITATION	SWORD|TWO_HANDED	samyeon	4	34	64			沅믦눧臾믨퉺젫 %.0f-%.0f	(1.1*MinATK + (0.3*MinATK + 0.5*STR + MinWEP)*SkillPoint) * 3	(1.1*MaxATK + (0.3*MaxATK + 0.5*STR + MaxWEP)*SkillPoint) * 3								
+2	WARRIOR	沅ョ뵺꼮肉	畑먈꾨늾땱	筌욌뜉履잋틠늺윿	룦젫넫끏而쏙쭇렖샑뙃뙆猷뼥눆윜쑑嫄э㏄醫롫뼏뮕源믣넇釉낅쐢猷노う뜣塋딅슢嫄ら펶源履	萸밸쨫쐢눧臾믨퉺				ATTACK_SKILL|CAN_CHANGE_DIRECTION|WEAPON_LIMITATION	SWORD|TWO_HANDED	palbang	16	46	76			눧臾믨퉺젫 %.0f-%.0f	3*MinATK + (0.8*MinATK + 2*STR + 2*DEX + 3*MinWEP) * SkillPoint	3*MaxATK + (0.8*MaxATK + 2*STR + 2*DEX + 3*MaxWEP) * SkillPoint								
+3	WARRIOR	슖꺃沅	猷ｇ솒눛寃	솄뵳맧源덆	뒗癲끸벃봺쑗룦븨뼫넰뿫뇦誘↔괴깗슞沅묐뮩礖諛뤾묶猷녘눧臾믨퉺젫	諭ㅿ쭖類ｌ탲源믩꽰굤	肉ㅻ꺗뵺끂釉몃꽰굤	沅꾥눧臾믨퉺쐢		STANDING_SKILL		jeongwi	12	42	72			눧臾믨퉺꽰굤 +%.0f%%	50 * SkillPoint		뵺끂釉몃꽰굤 +%.0f%%	20 * SkillPoint		沅꾥눧臾믨퉺쐢 %.0f%%	80 * SkillPoint			
+4	WARRIOR	뙃猷	熬곸뮀뇴뙃	逾뺟쳥떔猷	룦畑먈뗫：獄쏆빒곩밟벂뀷猷루뜏洹욌뻶넯뀆源ｅ럴슣젫塋딅슢嫄れ뒧源猷녘쐢	뭿땫肉겼밟뫁留띷┏꺃源				STANDING_SKILL|WEAPON_LIMITATION	SWORD|TWO_HANDED	geomgyeong	7	37	67			눧臾믨퉺젫 +%.0f	(100 + STR) * SkillPoint									
+5	WARRIOR	룯	堉⑤렡	쑓솄윿維	삃뛾肉곕뀊샑猷노믣궘뫓猷⑤룗굲猷維욌뻣堉좊퉵翁띾쵊쐶뙃醫꾠돖由꿨슖源곸㉥쐢	鍮띻퉺쐢눧臾믨퉺				ATTACK_SKILL|CHARGE_ATTACK|NEED_TARGET|WEAPON_LIMITATION	SWORD|TWO_HANDED	tanhwan	11	41	71			눧臾믨퉺젫 %.0f-%.0f	2*MinATK + (MinATK + 2*DEX + 4*STR + 3*MinWEP)*SkillPoint	2*MaxATK + (MaxATK + 2*DEX + 4*STR + 3*MaxWEP)*SkillPoint								
+16	WARRIOR	뱜뇖봼닱	넯營뚢뫕蹂	野껆뙴벃빍若	뱜걲뱶룓猿몄뒭꽰筌먮씭꼧뇦룗猷뜮뫀而양쳥슣룦紐뜣쐢怨몄쭕	萸뱀젦쐢눧臾믨퉺				ATTACK_SKILL|CAN_CHANGE_DIRECTION|NEED_TARGET|WEAPON_LIMITATION	SWORD|TWO_HANDED	gigongcham	5	35	65			눧臾믨퉺젫 %.0f-%.0f	2.3*MinATK + (MinATK*4 + STR + 3*MinWEP + CON)*SkillPoint	2.3*MaxATK + (MaxATK*4 + STR + 3*MaxWEP + CON)*SkillPoint								
+17	WARRIOR	阿잙쵊닱	뜮굟뵺	筌욌뛼뼢逾용윿	苑롮냹놁룇伊띶밟몿臾럫猷룇逾뽪썑關釉섇보濡곕렜釉용뱀젦塋딅슜볥う뜣沅꾨짍룯癒吏쏅３눧臾믨퉺	繞섓┤옓쐢눧臾믨퉺				ATTACK_SKILL|CAN_CHANGE_DIRECTION|WEAPON_LIMITATION	SWORD|TWO_HANDED	gyeoksan	3	33	63			눧臾믨퉺젫 %.0f-%.0f	2.3*MinATK + (3*MinATK + 2*STR + 2*MinWEP + 3*CON)*SkillPoint	2.3*MaxATK + (3*MaxATK + 2*STR + 2*MaxWEP + 3*CON)*SkillPoint								
+18	WARRIOR	誤곮퉪	諭욥뇡	瑗듣짆떩떗윿	젛猷녶넇酉몄뒣솾琉룸：醫꾠돖由꿨슖源痢ｏⅧ뀘겳쑎黎앹옊夷밸즹維욑Ⅴ짰뙕쐢怨ｋ돕노Ø猶용룦瑗댚눭묒죯	沃ㅲ뫖萸밸쐢눧臾믨퉺	뇦룗釉ㅿ쭕끉걹嫄る쐝肉섎㏄노틳猷			ATTACK_SKILL|STANDING_SKILL		daejin	1	31	61			눧臾믨퉺젫 %.0f-%.0f	2*MinATK + (2*MinATK + DEX + CON + 2*STR + 3*MinWEP)*SkillPoint	2*MaxATK + (2*MaxATK + DEX + CON + 2*STR + 3*MaxWEP)*SkillPoint	繞볦빘源믭쭕끉걹 %.0f%%	(100 + 1000*SkillPoint/6)/10						
+19	WARRIOR	維猷욌ず	畑듬끍렩	沃섎챸뵬猷ｇ뀗	六삳눃諭ㅻ꺙뿫雅뀈逾녶룶뭼畑댁떜뜗룥뒐堉꿴찛源뺤뜛쐞땾뙃띃겫룯癒吏쏅３눧臾믨퉺堉백쪛옓삺뤃끂솋猷	諭ㅻ꺙뿫雅	뭽留뵺끂釉몃꽰굤			STANDING_SKILL		cheongeun	10	40	70			젰耶껊れ젫 : +%.0f	7+(40 + 0.2*str + 0.5*con)*k		뵺끂釉몃꽰굤 : -%.0f	1 + 9*SkillPoint						
+20	WARRIOR	뙃뙴	땱쉹猷븍씜	뙃猷븍섋셀	뒭꽰굢癒釉몄냺雍용퀫뀷猷룰괭營뚯옕쐠뚮짘萸꾩겳뼥빣筌띿렲肉뗰쭛끆苡녹맋榮꾨떧뵹솋源믩う뜣	뇗瑗김눧臾믨퉺	넇釉뚰닎쐢눧臾믨퉺	源믧쨹빇럦甕	源믪죯紐뜣	ATTACK_SKILL|CAN_CHANGE_DIRECTION|WEAPON_LIMITATION	SWORD|TWO_HANDED	geompung	17	47	77			눧臾믨퉺젫 %.0f-%.0f	2*minatk + (minatk + 3*(dex + str + MinWEP))*k	2*maxatk + (maxatk + 3*(dex + str + MaxWEP))*k	繞볦빘源믭쭕끉걹 %.0f	(100+k*1000/6)/10						
+31	ASSASSIN	揶쏆×솁	솿源	筌욊낮而얜룠룥	솿熬곸뮂琉苑猷녕뵺맕由塋딅슣굺留띾う뜣뤃癒돭塋딅슢걵潁뺣㈃뙅筌κ막룂源믥쳥슢嫄ら펶源履	뜮뜄젦뜰끀솁猶용광堉源믪젫	솿力녹럡뇣閭			ATTACK_SKILL|MELEE_ATTACK|NEED_TARGET|WEAPON_LIMITATION	DAGGER|DOUBLE_SWORD|SWORD	amseup	2	32	62			눧臾믨퉺젫 : %.0f-%.0f	minatk + (minatk + 500 + 2*(dex + str + 1.5*MinWEP))*k	maxatk + (maxatk + 700 + 2*(dex + str + 1.5*MaxWEP))*k								
+32	ASSASSIN	嶸뗪쑈뇥	耀붿옃뇥뙃	藥뀁꼯뇥뭽燁	뼖쓠鴉딉퐣닏猷녔납뜾읇뫓猷≪뭬諭猷維욌뻣嫄쐶黎앹옕李ㅹ놅쭛節낆겳也롮몛筌믩	六삳눃뵺끂釉멱눧臾믨퉺	솿力녹럡뇣閭			ATTACK_SKILL|NEED_TARGET|WEAPON_LIMITATION	DAGGER|DOUBLE_SWORD|SWORD	gungsin	0	30	60			눧臾믨퉺젫 %.0f-%.0f	(minatk + (1.6*minatk + 200 + 3*(dex + str + 1.5*MinWEP))*k)	(maxatk + (1.6*maxatk + 200 + 3*(dex + str + 1.5*MaxWEP))*k)								
+33	ASSASSIN	維쒖럱肉	젵藥뀀떩닱	뵳눃뜡쎔듇	猷롮깓黎앫렗梨븅뼥壤긱끁猷щ븧윜쑑嫄э㏄節뚭퉺젦筌귣베理뤾퉺紐뜣塋딅슜嫄猶용．븨耶껊쵊솶	耶껊쵊솶猶용쐢눧臾믨퉺	苑붻떏濡ヨ눧臾믨퉺			ATTACK_SKILL|CAN_CHANGE_DIRECTION|WEAPON_LIMITATION	DAGGER|DOUBLE_SWORD|SWORD	charyun	6	36	66			눧臾믨퉺젫 %.0f-%.0f	2*minatk + (0.5*minatk + dex*7 + str*5 + MinWEP*3)*k	2*maxatk + (0.5*maxatk + dex*7 + str*5 + MaxWEP*3)*k	雍용낄筌띲끉걹 %.0f%%	1 + 4*k						
+34	ASSASSIN	솿	維疫뀀떥닩	늾臾뗫윿疫꿸낱맠	솿熬곸뮂琉苑猷녔콨렗梨븃뎨뛾씤維욌뮟젡룜뼀늾몦礖뛾쑠넯뜕沅좊솷源믩３諭띠젫	눧臾믨퉺猶용쑆눡				STANDING_SKILL		eunhyeong	8	38	68			瑜곷꺗쐢怨ｋ돋 : +%.0f%%	50 * SkillPoint									
+35	ASSASSIN	麗	亦낅９竊앮마	甕곕벉源룹뿻	샑琉苑넇釉낅쐢뀆넁뮒뇦룊뮩嫄쏙ℓ源낅３麗몄쉻렰띃겫굺留띾뮁猷노う뜣堉배녹뮇뀱沅꾨짍猷노퉪솁	뇗瑗김눧臾믨퉺	넇釉뚰닎쐢눧臾믨퉺	苑붻떏濡ヨ눧臾믨퉺		ATTACK_SKILL|NEED_TARGET		sangong	13	43	73			눧臾믨퉺젫 %.0f-%.0f	lv*2+(2*minatk + str*3 + dex*14)*k	lv*2+(2*maxatk + str*3 + dex*14)*k	雍용낄筌띲끉걹 %.0f%%	40*k		雍용낄猶용눃 %.0f뿆	5+25*k			
+46	ASSASSIN	졐	獄쏆쉹맠떭	猷븃쳸쉶뇡	鍮뗪퐥琉윢뚢뱿逾뤿퓦쑎癲⑷퀙源낇뜝畑듐끁維욌뿥굚삌꼧몜節뉖굡젫鍮묐솏猷노젘떭塋딅슢苑붻떏濡⑤뮒源룩쐢	뇗瑗김눧臾믨퉺	몜뮶눧臾믨퉺			ATTACK_SKILL|NEED_TARGET|WEAPON_LIMITATION	BOW	yeonsa	1	31	61		2 + floor(6 * SkillPoint)	沅믦눧臾믨퉺젫 %.0f-%.0f	minatk + 0.2*minatk*floor(1+k*6)+ (0.8*minatk+(dex*4 + MinWEP)*ar) *k	maxatk + 0.2*maxatk*floor(1+k*6)+ (0.8*maxatk+(dex*4 + MaxWEP)*ar) *k	%.0f節뚮떭	2 + floor(6 * SkillPoint)			
+47	ASSASSIN	藥뀁꼷떭	若뱀렲삗떭	維뙴빜뵕뮩	뇦룗뮶룊젇뜂留볥젘裕λ욕쑎雅슡媛붾뭽維욌뻣庸뉕막뱥쑚逾욆쐢怨ｋ탣壅녕뛾씤維욌뮟젡룦嚥	뇗瑗김눧臾믨퉺	삜슌猶욤눧臾믨퉺몜筌뤿챶뒘솻			ATTACK_SKILL|FAN_RANGE|NEED_TARGET|WEAPON_LIMITATION	BOW	gwangyeok	5	35	65	2 + floor(6 * SkillPoint)		눧臾믨퉺젫 %.0f-%0.f	minatk + (minatk + dex + str + 0.5*MinWEP)*k	maxatk + (maxatk + dex + str + 0.5*MaxWEP)*k	뜶솏긿븨눧臾믨퉺%.0f筌	2 + floor(6 * SkillPoint)			
+48	ASSASSIN	寃떭	뮲醫롮젫떭	源곸릉냷	떭庸뉖쑜肄녿룸렪裕욑쫱븚議삳섦쑟雅슣쐠뚢뱿逾뤿퓦臾볥솑궟維욄납源놃뢾猶울쭗궘猿닺쐢	뇗瑗김눧臾믨퉺	넇釉뚰닎쐢눧臾믨퉺	沅ョ뵺꼶理뤾퉺		ATTACK_SKILL|NEED_TARGET|WEAPON_LIMITATION	BOW	hwajo	10	40	70			눧臾믨퉺젫 %.0f-%.0f	1.5*minatk + (2.3*minatk)*k	1.5*maxatk + (2.3*maxatk + 100)*k					
+49	ASSASSIN	堉녻눧		뮧癲됱띁맯겫	寃礖議쏀돦堉ц뫓뒭꽰猷녕뵺맚럡塋딅슞뇗솇紐뜣猷녘눧臾믨퉺	諭ㅿ쭖類㎯뀇釉몃꽰굤				STANDING_SKILL|TOGGLE		gyeonggong	3	33	63			뵺끂釉몃꽰굤 : +%.0f	60*SkillPoint						
+50	ASSASSIN	떭	뻺沃섎떭	瑜곴텦몟筌	떭庸뉖쓬굫넃黎앹꼮궔留쇤쪛옖뜣굜꼷쑆塋딅슜볥う뜣雍용낌떭猷녕삜슌猶욧텇猷숇３鍮귣뻺	뇗瑗김눧臾믨퉺	넇釉뚰닎쐢눧臾믨퉺	源믪죯紐뜣	苑붻떏濡ヨ눧臾믨퉺	ATTACK_SKILL|NEED_TARGET|WEAPON_LIMITATION	BOW	gigung	15	45	75			눧臾믨퉺젫 %.0f-%.0f	minatk + (1.2*minatk + dex*2 + str + MinWEP)*k	maxatk + (1.2*maxatk + 100 + dex*2 + str + MaxWEP)*k	雍용낄筌띲끉걹 %.0f%%	80*k		雍용낄猶용눃 %.0f뿆	15+30*k
+61	SURA	렡鴉딉퐦履	雅뚯늼룥畑	윿뤃눖萸밥틠	삌굢癒臾좂븨옓猷노깻솏젫넫냵렰逾띾렡堉⑤린솂젫塋딅슗姨猷녿깻雅뚯쥓猷녔꽴뱺猷η쳥슢理뤾퉺紐뜣	萸뱀젦쐢눧臾믨퉺	耀붿엻쑎뒘젦젰耶껊ㅳ럦甕	뵓쉨뭴젫肉ㅻ꺗쐢		ATTACK_SKILL|MELEE_ATTACK|NEED_TARGET		swaeryeong	11	41	71			눧臾믨퉺젫 %.0f-%.0f	minatk + 2*lv + iq*2 + (2*minatk + str*3 + iq*9 + 5*MinWEP) * k	maxatk + 2*lv + iq*2 + (2*maxatk + str*3 + iq*9 + 5*MaxWEP) * k	뜮遺뱀쑎뒘젦젰耶껊⒱꼻筌 %.0f%%	1 + 9*SkillPoint			
+62	SURA	筌욌뜆堉댆	肉볡뙴몾뜔	뒽瑗ㅺ깼	쓠눇燁삘몺猷욌３젫넫냵렰閭잕낮鍮녕룯癒吏쏅３筌욌뜆堉뙴뫅렰筌륁궚젆쐢뮒源룸퉹솏쐢	沃ㅲ뫖萸밸쐢눧臾믨퉺	耀붿엻쑎뒘젦鈺곕뛿룈猷	뵓쉨뭴젫肉ㅻ꺗쐢		ATTACK_SKILL|STANDING_SKILL		yonggwon	16	46	76			눧臾믨퉺젫 %.0f-%.0f	1.1*minatk + 2*lv + 2*iq + (1.5*minatk + 3*MinWEP + iq*6) * k	1.1*maxatk + 2*lv + 2*iq + (1.5*maxatk + 3*MaxWEP + iq*6) * k	뜮遺뱀쑎뒘젦鈺곕뛽利녠묶 %.0f%%	1 + 9*SkillPoint			
+63	SURA	뙃燁	땱쉸뀼뙃	肉쇽쭪뛾샑윿	룦겫떚而용３젫넫끏而쏙쭇룤鍮삭뮲醫뤿７雍용낑렰삃뛼뮁삌굢癒뀼猷븀쳥슪肉ㅻ깻쐢	留띴퓩轅④폁礖꺃源믪삌굢癒ъ퐶肉	뵓쉨뭴젫肉ㅻ꺗쐢	略녠만苡ヨ눧臾믨퉺		STANDING_SKILL|TOGGLE|WEAPON_LIMITATION	SWORD	gwigeom	5	35	65			눧臾믨퉺젫 +%.1f	7 + (5*iq+13) * k		野 %.0f%% 쐢怨ｋ돋嫄듸쭚눧뿽要쏆⑹Ŋ鈺	10*k			
+64	SURA	넞堉	雅洹λ	븨꺃쒖뒽燁	듁紐뜣솒怨룸짍瑗몄굤猷녹넞堉껆쳥쉵떏윯맾솱略녹빁逾놁옊젙筌ｂ뫒겧쐶넽	뭽留뒘젦눧臾믨퉺젫	뒘젦눧臾믨퉺維볟칰뫀꼻筌잛띁肉ㅻ꺗	沅꾥쐢怨ｋ돕녠낫럵留딆쑎		STANDING_SKILL|TOGGLE		gongpo	3	33	63			畑댁뒘눧臾믨퉺젫 -%.0f%%	1 + 29*SkillPoint		삃뜄뒘젦눧臾믨퉺維볟칰뫀꼻筌 %.0f%%	1 + 29*SkillPoint			
+65	SURA	젇猿놁낵	沅	윿燁삘뫀彛쒎죰	뜮슢鍮녕㎉몺猷욌３겫떚而우뜚꼩塋딅슞쐢뜒넇酉몃띸쳥렯깅쑅癰귣ㅏ맅윜臾덈뼲	沅꾨짍쐢怨ｋ턃뤃節뗫뮟뜋筌먯꼷겳癲㎬쐢	諭ㅿ쭖類ｌ젰耶껊れ젫	뵓쉨뭴젫肉ㅻ꺗쐢		STANDING_SKILL|TOGGLE		jumagap	6	36	66			젰耶껊れ젫 +%.0f	(iq+30)*k		꽅솊눧臾믨퉺쓦庸뉗빜源 %.0f%%	(iq/4+10)*k			
+66	SURA	굺	뼯寃	뵳沃섋뿭沅	肉곕벉뵟猷녑쥒蹂잛몤뇾諛깊떓紐뜣塋딅슦굺瑗維욑쫶臾딅뙆濚뱀빘踰숇교誤곸釉쎈윬	뇗瑗김눧臾믨퉺	넇釉뚰닎쐢눧臾믨퉺	굺눡뒘젦뵳겳눇삺癲		ATTACK_SKILL|NEED_TARGET		pabeop	10	40	70			燁삘뫀삺눧臾믨퉺젫 %.0f-%.0f	40 + 5*lv + 2*iq + (18*iq + 7*minmtk + 50)*ar*k	40 + 5*lv + 2*iq + (18*iq + 7*maxmtk + 100)*ar*k	뵺끏눡뵳겳눇癲낆궠苡몌쭕끉걹 %.0f%%	50*k			
+76	SURA	燁삘뫁뀼	獄怨	몟沅쏃뭣	빞萸밸윦雍용퀪뿽궎냳猷븀쳥슣苑롫쑅源룬겫떚而우젫넫끏걵뒘젦뮒源룩쐢	뇗瑗김눧臾믨퉺	뒘젦넇釉뚰닎눧臾믨퉺			ATTACK_SKILL|NEED_TARGET		maryeong	1	31	61			燁삘뫀삺눧臾믨퉺젫 : %.0f-%.0f	40 + 5*lv + 2*iq + (10*iq + 8*minmtk + 50)*ar*k	40 + 5*lv + 2*iq + (10*iq + 8*maxmtk + 100)*ar*k					
+77	SURA	겫떝彛뤷쥒	윦筌욌뜇솇	燁삘뫁彛뤷젇猿뉖윿	빞벉뵟遙λ벉臾썹뛾誘⑺뀯筌욌뛾爾쇠굜遺쎈돇삌踰㏘틠醫딅３沅ョ뵺꼻렰뙳벂끇夷밸즹筌遺븍쳻	沃ㅲ뫖萸밸쐢눧臾믨퉺	沅ョ뵺꼶理뤾퉺			ATTACK_SKILL|STANDING_SKILL		hwayeom	17	47	77			燁삘뫀삺눧臾믨퉺젫 : %.0f-%.0f	5*lv + 2*iq + (7*iq + 8*mtk + str*4 + con*2 + 180)*k	5*lv + 2*iq + (7*iq + 8*mtk + str*4 + con*2 + 200)*k					
+78	SURA	沅쎽펺	燁삘뫅夷	윦沅ョ뙳	꼶瑗븐뿻벉뵟猷녕㎉뫁뀼塋딅슚竊뺡뜮湲몃옿뇦뜣塋딅슣룦눧臾믨퉺뵛逾띿굺留띺뇦뜣猷노う뜣	뇗瑗김눧臾믨퉺	띃븨맚맽뮲빖理뤾퉺뒘솻	넇釉뚰닎쐢눧臾믨퉺		ATTACK_SKILL|STANDING_SKILL|TOGGLE		muyeong	15	45	75			燁삘뫀삺눧臾믨퉺젫 : %.0f-%.0f	30 + 2*lv + 2*iq + (9*iq + 7*minmtk + 200)*ar*k	30 + 2*lv + 2*iq + (9*iq + 7*maxmtk + 500)*ar*k					
+79	SURA	겫떝臾졾쥒	耶껊り텦癲	윿뇢萸밸쨳	六삳눃꽴벉삌겫떚而우젫넫냵렰嫄わⅩ傭굛筌믭┼醫롫퍝畑룸뀘겳쓦쐵샒濡떑櫻뗪쑴굸湲쎈돕노Ø猶욘꽴琉용Ы琉苑	維쀬젫繞볝끇쐷櫻뗫쓬夷壤깃낮留뽰궀뭽녘쐢	諭ㅿ쭖類ｌ젰耶껊れ젫			STANDING_SKILL|TOGGLE		heuksin	2	32	62			쐢怨ｋ돋留쀫땴筌 %.0f%%	(15 + iq*0.5)*k		젰耶껊れ젫 +%.0f	(0.5*iq+15)*k			
+80	SURA	뜷筌	맄	뼣몭씮룖뵺	젛肉곗뵟燁삘뫀猷녹젫넫냱넦뀆볥뻷玉좊챷뜇塋딆뫕誘뚣끃쐥維욑Ⅴ짰뙕歷띠쉪쑕塋딅슣뭽留뒘젦猷녕뵺끂釉몃꽰굤	뇗瑗김눧臾믨퉺	뒘젦넇釉뚰닎눧臾믨퉺	뵺끂釉몃꽰굤땴筌		ATTACK_SKILL|NEED_TARGET		tusok	9	39	69			燁삘뫀삺눧臾믨퉺젫 : %.0f-%.0f	40 + 2*lv + 2*iq + (2*con + 2*dex + 10*iq + 8*minmtk+ 180)*ar*k	40 + 2 * lv + 2*iq + (2*con + 2*dex + 10*iq + 8*maxmtk + 200)*ar*k	筌묒쥙媛筌띲끉걹 : %.1f%%	(333 + (300 * k))/10		筌묒쥙媛猶용눃 : %.0f	10 + (10 * SkillPoint)
+81	SURA	肉볡㎉	雅洹γ꽱맦	維쒖럱젢뒄	鴉듼돦넇癲㏃슧猷녺쳥슣룦냺雍용낄猷노벉뵟젫넫냱鍮뗪퐥源룬뇦룗猷겫떏源띕렣猷롪괭留꿩㎉源믪뇗닣猷노う뜣	뇗瑗김눧臾믨퉺	뒘젦넇釉뚰닎눧臾믨퉺			ATTACK_SKILL|NEED_TARGET		geomhwan	7	37	67			燁삘뫀삺눧臾믨퉺젫 %.0f-%.0f	120 + 6*lv + (5*con + 5*dex + 25*iq + 12*minmtk)*ar*k	120 + 6*lv + (5*con + 5*dex + 25*iq + 12*maxmtk)*ar*k					
+91	SHAMAN	鴉딉퐢而	獄쏄맏뵕댆	뿥룓맅듇癲	鍮뗪퐥윿萸밸눃猷념펺節띾：벀臾먭뭍뿥룓맅獄쏆옖肉루쳥슢걵넇釉낅쐢猷노う뜣뮒源룸퉹솏猷노섍퉺	뇗瑗김눧臾믨퉺	넇釉뚰닎쐢눧臾믨퉺			ATTACK_SKILL|FAN_RANGE|NEED_TARGET		bipabu	0	30	60			燁삘뫀삺눧臾믨퉺젫 : %.0f-%.0f	70 + 4*lv + (15*iq+5*minmtk+50)*ar*k	70 + 4*lv + (15*iq+5*maxmtk+50)*ar*k					
+92	SHAMAN	筌욌뛾뇥	筌욌뜉履	萸븝쭪뜃肄묐윿	젶猷볥＇玉좊챷떄塋딆렯苑ⓨ쓦歷뜯넂띾탺癲ъ뼂뫝留볟젆맠돖畑댁늿꺎野껋뭾맂옚룕깅쑅癰귣벡뢾猶욤눧臾믨퉺紐뜣	繞섓┤옓쐢눧臾믨퉺	苑붻떏濡沅ョ뵺꼮럦甕			ATTACK_SKILL|NEED_TARGET		yongpa	5	35	65			燁삘뫀삺눧臾믨퉺젫 : %.0f-%.0f	60 + 5*lv + (15*iq + 6*minmtk + 120)*ar*k	60 + 5*lv + (15*iq + 6*maxmtk + 120)*ar*k	苑붻떏濡沅ョ뵺꼶꼻筌  %.0f%%	iq*0.2*k		苑붻떏濡沅ョ뵺꼶理뤾퉺젫  %.0f	lv+5*iq *k
+93	SHAMAN	筌욌뜂떓	筌욌뛼履	維筌욌뜃荑뗦콨	癲껉랜猷숁췃怨룸뭄猷노＇읉塋낆궥뵑寃묕Ⅴ늿六쀥죰袁잙탲肉륁졒젇猿낆뵛逾띾う뜣	沃ㅲ뫖萸밸쐢눧臾믨퉺	苑붻떏濡沅ョ뵺꼮럦甕			ATTACK_SKILL|STANDING_SKILL		paeryong	6	36	66			燁삘뫀삺눧臾믨퉺젫 %.0f-%.0f	70 + 2*lv + (10*iq+15*minmtk+100)*ar*k	70 + 2*lv + (10*iq+15*maxmtk+100)*ar*k	苑붻떏濡沅ョ뵺꼶꼻筌 %.0f%%	iq*0.2*k		苑붻떏濡沅ョ뵺꼶理뤾퉺젫  %.0f	lv+5*iq *k
+94	SHAMAN	쑅쑟	윿域	畑먈딆춳뜮湲븐낵	삃뛾肉곤쭪뜆夷щ윦源룸３뜮源녿꼩쐲逾띻섯踰猷녹젰耶껊れ젫塋딅슜볥．沅꾦뜮源爾泳꼷꺗揶쏆룈냹	維딆굙꽅솊눧臾믨퉺	뒘삜슙볢삃뛾肉곗긿굜			CAN_USE_FOR_ME|NEED_TARGET|ONLY_FOR_ALLIANCE		hosin	4	34	64			꽅솊눧臾믨퉺維딆굙 : %.1f%%	(iq*0.3+5)*(2*k+0.5)/(k+1.5)						
+95	SHAMAN	猷롦마쉯뜔	鶯ㅻ봿踰앭	윿俑앸…逾ｋ：	벜踰앶뇦룓猿몃３뜮源끾꽴琉용Ы癲뗣굠볥염뛾誘렰룦쓦윲紐뜣猷녘눧臾믨퉺塋딅슡렧沅꾥쐢	쓦셾畑띠뼇늿源	뒘삜슙볢삃뛾肉곗긿굜			CAN_USE_FOR_ME|NEED_TARGET|ONLY_FOR_ALLIANCE		boho	14	44	74			꽅솊눧臾믨퉺쓦庸뉗빜源 %.1f%%	5+(iq*0.3 + 5)*k						
+96	SHAMAN		윿筌욌뜆沅	筌욌뛿梨	쓠눇筌욌뛼痢뚢뱿逾륁넃寃ユ에紐꾨㏈쓦뇾넟눀윢筌節뚭퉺젫	뙅筌κ퉭理뤾퉺	뒘삜슙볢삃뛾肉곗긿굜			CAN_USE_FOR_ME|NEED_TARGET|ONLY_FOR_ALLIANCE		gicheon	12	42	72			뙅筌κ퉭솋源믭쭕끉걹 : %.1f%%	(iq*0.3+5)*(2*k+0.5)/(k+1.5)						
+106	SHAMAN	壤쏆빘뿵	維볥윿뿵	諭븅넫뎽	礖딅쓠눇윿畑댁늿뢾젫塋딅슢걵潁뺣챶紐뜣踰솏猷노군源믦쐢	뇗瑗김눧臾믨퉺	넇釉뚰닎쐢눧臾믨퉺	諭븃뎲袁ｌ굤쐢		ATTACK_SKILL|NEED_TARGET		noejeon	23	53	83			燁삘뫀삺눧臾믨퉺젫 : %.0f-%.0f	60 + 4*lv + (3*iq+8*minmtk+iq*5)*ar*k	60 + 4*lv + (3*iq+8*maxmtk+iq*15)*ar*k					
+107	SHAMAN	렜뿵	넫	肉뗫윿뙓癲	뿵畑댁늿렞鈺쉷띾룡췃넀닂踰솏猷놂퐤꽅굜꼷젫塋딅슜볥읂鍮욌탫踰솏猷녹뿵諭븃눧臾믨퉺굜꼷젫	뇗瑗김눧臾믨퉺	넇釉뚰닎쐢눧臾믨퉺	諭븃뎲袁ｌ굤쐢	源믧쨹빇럦甕	ATTACK_SKILL|NEED_TARGET		byeorak	17	47	77			燁삘뫀삺눧臾믨퉺젫 %.0f-%.0f	40 + 3*lv + (3*iq+12*mtk+iq*5)*ar*k	40 + 4*lv + (3*iq+12*maxmtk+iq*16)*ar*k	繞볦빘源믭쭕끉걹 %.0f%%	(50+1000*k/6)/10			
+108	SHAMAN	꽴딆뿵	寃윿뿵	뿥룂뿵뀎怨뺣툢	議딅떭뇦룓猿몃３뿵諭븀쳥슡렧넯듇넅若밟뫀紐뜣뜏洹앹날塋딅슜異얜뮦嫄り탾뜲떝荑뉛㏄遺욤쐢	뇗瑗김눧臾믨퉺	諭븃뎲袁ｌ굤	졐떏濡レ탲源믣넇釉뚰닎紐뜣		ATTACK_SKILL|NEED_TARGET		pokroe	7	37	67			燁삘뫀삺눧臾믨퉺젫 : %.0f-%.0f	(50 + 5*lv + (6*iq+6*minmtk+1)*ar*k)	(50 + 5*lv + (6*iq+6*maxmtk+800)*ar*k)					
+109	SHAMAN	獄쏆엻竊	獄	筌뚯꼶而얜쇂썒	솏萸밭뜏洹λ쿃筌륁궘猿닺삃뛾肉곁뛾誘⑹났몜猷노쳴젫몤ⓦ끁눇굢옓뵺濚욌맠뮲빊뮆눡繞볥（닀猷노굡뼦	굢옓뵺濚욌맚뜗	굢옓뵺濾겸뫖寃긺쨼떥梨	뒘삜슙볢삃뛾肉곗긿굜		CAN_USE_FOR_ME|NEED_TARGET|ONLY_FOR_ALLIANCE		jeongeop	2	32	62			濚욌맚뜗遺껆븨 %.0f-%.0f	200+4*lv+(10*iq+6*minmtk+600)*k	200+4*lv+(10*iq+6*maxmtk+800)*k	굢옓뵺濾겸뫖寃긺쨼떥梨뤄쭕끉걹 %.0f%%	20+80*k			
+110	SHAMAN	뱜룥	堉녺뵺	뱜뿆껊뮧듇	瑗뙴뫀뿻뱜塋딅슦벜삜슖룥冶ⓥ댙렰肉ㅻ꺗뵺끂釉몃꽰굤	諭ㅿ쭖類㎯뀇釉몃꽰굤	땴營뚮퀬럨轝뀀Þ렗	뒘삜슙볢삃뛾肉곗긿굜		CAN_USE_FOR_ME|NEED_TARGET|ONLY_FOR_ALLIANCE		kwaesok	9	39	69			뵺끂釉몃꽰굤 +%.0f%%	5 + (35 * k)		넼議껊꽰굤 +%.0f%%	3+33*k			
+111	SHAMAN	떉	踰솇癲	沅쏆뿵뮙櫻	釉れ벜쉸琯猷囹븍뗫샥亦낃래肉醫꾠돖戮り텓쐠筌댖棺뮏逾녿광筌롫베뒘紐뜣猷녘쐢	諭ㅿ쭖類ㅺ묘뤃쓹理뤾퉺젫	뒘삜슙볢삃뛾肉곗긿굜			CAN_USE_FOR_ME|NEED_TARGET|ONLY_FOR_ALLIANCE		jeungryeok	29	59	89			눧臾믨퉺젫 : +%.1f	5+(iq*0.2 + 15)*k						
+121	SUPPORT	럳룏			諭ㅻ쐠嶺뚣끉볟껙빁逾녿광筌롫틺윦뒔癲낆궡걹					PASSIVE		tongsol													
+122	SUPPORT	耶껋쥏彛			肉ㅻ꺗耶껋쥏彛졿묾떍塋딅슜肉ㅻ꺗눧臾믨퉺뮶紐					CANNOT_LEVEL_UP|TOGGLE		combo													
+123	SUPPORT	逾뙅			諭ㅿ쭖類ｋ덱뙅굜꼷젫塋딅슢爾듭몠븨猿됰럦됰짍뙅					CANNOT_LEVEL_UP		fishing													
+124	SUPPORT	땻猿뗭뜋			諭ㅻ뻺뜋굜꼷젫塋딅슢爾듭몠븨猿됲릻苑롫짍筌롫벡苑잛뜋쑓					CANNOT_LEVEL_UP|PASSIVE		mining																
+125	SUPPORT	긾뮒			諭ㅺ샹걲꼳援잌껙빁逾녺췅쇆嶸뗪퍎넀앲노쵊痢					CANNOT_LEVEL_UP|PASSIVE		making																
+126	SUPPORT	룇솢꽴뮆諭			諭ㅹ썚빁堉뻻鶯끹깷彛뉖쐥뚋몃탹亦.					CANNOT_LEVEL_UP|PASSIVE		language1																
+127	SUPPORT	鍮먮솢꽴뮆諭			諭ㅼ돯鈺슕볟즳깷彛뉖쐥뚋몃탹亦.					CANNOT_LEVEL_UP|PASSIVE		language2																
+128	SUPPORT	癰귣쑚솢꽴뮆諭			諭ㅹ펶蹂μ깚鶯끹깷彛뉖쐥뚋몃탹亦.					CANNOT_LEVEL_UP|PASSIVE		language3																
+129	SUPPORT	젆늾떍			뼄沅リ퉹댖掠뗪였夷뱄㎗꼶而꽅猷녕벀臾됱굣,繹먯궏裕뀀탫뇦렖二れ뵏黎앸씭猷녘뎲袁ｌ굤.					CANNOT_LEVEL_UP|PASSIVE		polymorph																
+130	SUPPORT	猷꾧석			猷꾬쭬뫖猷녘굜꼷젫					CANNOT_LEVEL_UP|PASSIVE		riding																
+131	SUPPORT	閭잕낮鍮			閭잕낮鍮놂쭬뫚뭼							summon																10
+137	HORSE	琉울펷땱			猷꾬쭬뫕렗繹먯궠理뤾퉺넇釉낅쐢猷노う뜣	筌졻뫕꺍苑굜				HORSE_SKILL|MOVING_SKILL|WEAPON_LIMITATION	SWORD|TWO_HANDED|DAGGER|DOUBLE_SWORD|FAN|BELL	wildattack	121	121	121												50	
+138	HORSE	뼍紐諭			源믩즼萸뱀젦몶솋猷노う뜣	筌졻뫕꺍苑굜				HORSE_SKILL|SEARCH_TARGET|CHARGE_ATTACK		charge	122	122	122												52	
+139	HORSE	諭뜸펺뗫솄			눧臾믨퉺넇釉낅쐢猷노う뜣	筌졻뫕꺍苑굜				HORSE_SKILL|WEAPON_LIMITATION	SWORD|TWO_HANDED|DAGGER|DOUBLE_SWORD|BOW|FAN|BELL	splash	123	123	123												55	
+140	HORSE	肉х뇖봿爾듬떭			냻寃쏂맱節낇뇖뚮㈇媛붾뭽維	筌졻뫕꺍苑굜				ATTACK_SKILL|FAN_RANGE|NEED_TARGET|HORSE_SKILL|WEAPON_LIMITATION	BOW	wildattack	121	121	121	5											50	
+151	GUILD	筌욌뜆沅			肉ㅻ꺗뜶솏筌욌뛾猷㏓탣굜꼶異쇘땟꼶눐猷녘삃뛾肉경ⓦ끉援깃쉭굜					PASSIVE		yongan						뜶솏筌욌뛾猷 +%.0f	k * 1400									
+152	GUILD	筌욌뛽苡			紐용♧諭ㅻ＄넯凉깅ㅋ猿딅３뜶솏濚욌맟移	ⓦ끉援긷슖깺뇡肉				ONLY_FOR_GUILD_WAR		gaho	101					뜶솏濚욌맟移留녿룥 +%.0f%%	k * 20									
+153	GUILD	筌			紐용♧諭ㅻ＄넯凉깅ㅋ猿딅３뜶솏維쀬젫繞	ⓦ끉援긷슖깺뇡肉				ONLY_FOR_GUILD_WAR		chukbok	102					뜶솏維쀬젫繞볝끃룥 +%.0f%%	k * 20									
+154	GUILD	筌욌뛼뜡			紐용♧諭ㅻ＄넯凉깅ㅋ猿딅３젰耶껊れ젫	ⓦ끉援긷슖깺뇡肉				ONLY_FOR_GUILD_WAR		seonghwi	103					젰耶껊れ젫룥 +%.1f%%	k * 10									
+155	GUILD	筌욌뛽럪			紐용♧諭ㅻ＄넯凉깅ㅋ猿딅３눧臾믨퉺꽰굤얄뫅뀇釉몃꽰굤	ⓦ끉援긷슖깺뇡肉				ONLY_FOR_GUILD_WAR		gasok	104					눧臾믨퉺,뵺끂釉몃꽰굤룥 +%.1f%%	k * 15
+156	GUILD	筌욌뜇寃			紐용♧諭ㅻ＄넯凉깅ㅋ猿딅３떏る뜤쐢怨ｋ돕筌╈돧源	ⓦ끉援긷슖깺뇡肉				ONLY_FOR_GUILD_WAR		bunno	105					떏る뜤쐢怨ｋ뎠源 +%.0f%%	k * 50
+157	GUILD	筌욌뛼臾			紐용♧쑘궞ⓦ끉援깃뭍猿딅３苑굜꼪룄議껊♧눃	ⓦ끉援긷슖깺뇡肉				ONLY_FOR_GUILD_WAR		jumunsul	106					넼議껊꽰굤룥 +%.0f%%	k * 50

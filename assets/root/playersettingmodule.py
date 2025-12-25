@@ -131,7 +131,7 @@ def RegisterSkill(race, group, empire = 0):
 			for i in xrange(len(activeSkillList)):
 				skillIndex = activeSkillList[i]
 				
-				## 7�� 8�� ��ų�� ���⼭ �����ϸ� �ȵ�
+				## 7쐻猷욎굲 8쐻猷욎굲 쐻猷욎굲沅쀫쐻猷욎굲 쐻猷욎굲쐻쑆苑 쐻猷욎굲쐻猷욎굲쐻뼣筌뤿슣굲 쐻뼍踰앹굲
 				if i != 6 and i != 7:
 					player.SetSkill(i + 1, skillIndex)
 
@@ -221,20 +221,20 @@ def __InitData():
 	chrmgr.RegisterCacheEffect(chrmgr.EFFECT_SPEEDUP_GREEN, "", "d:/ymir work/effect/etc/recuperation/drugup_green.mse")
 	chrmgr.RegisterCacheEffect(chrmgr.EFFECT_DXUP_PURPLE, "", "d:/ymir work/effect/etc/recuperation/drugup_purple.mse")
 
-	#�ڵ����� HP, SP
+	#쐻솓踰앹굲쐻猷욎굲쐻猷욎굲 HP, SP
 	chrmgr.RegisterCacheEffect(chrmgr.EFFECT_AUTO_HPUP, "", "d:/ymir work/effect/etc/recuperation/autodrugup_red.mse")
 	chrmgr.RegisterCacheEffect(chrmgr.EFFECT_AUTO_SPUP, "", "d:/ymir work/effect/etc/recuperation/autodrugup_blue.mse")
 	
-	#�󸶴� �ʽ´��� ����(71135) ������� �ߵ� ����Ʈ
+	#쐻猷ワ쭕뜄솇굲 쐻뼏뱟솇굲쐻猷욎굲 쐻猷욎굲쐻猷욎굲(71135) 쐻猷욎굲쐻猷욎굲쐻猷욎굲쐻 쐻솯踰앹굲 쐻猷욎굲쐻猷욎굲뱜
 	chrmgr.RegisterCacheEffect(chrmgr.EFFECT_RAMADAN_RING_EQUIP, "", "d:/ymir work/effect/etc/buff/buff_item1.mse")
 	
-	#�ҷ��� ���� ������� �ߵ� ����Ʈ
+	#쐻筌뚭쑴굲쐻猷욎굲 쐻猷욎굲쐻猷욎굲 쐻猷욎굲쐻猷욎굲쐻猷욎굲쐻 쐻솯踰앹굲 쐻猷욎굲쐻猷욎굲뱜
 	chrmgr.RegisterCacheEffect(chrmgr.EFFECT_HALLOWEEN_CANDY_EQUIP, "", "d:/ymir work/effect/etc/buff/buff_item2.mse")
 	
-	#�ູ�� ���� ������� �ߵ� ����Ʈ
+	#쐻쎘癰귣뱶쐻猷욎굲 쐻猷욎굲쐻猷욎굲 쐻猷욎굲쐻猷욎굲쐻猷욎굲쐻 쐻솯踰앹굲 쐻猷욎굲쐻猷욎굲뱜
 	chrmgr.RegisterCacheEffect(chrmgr.EFFECT_HAPPINESS_RING_EQUIP, "", "d:/ymir work/effect/etc/buff/buff_item3.mse")
 
-	#����� �Ҵ�Ʈ ������� �ߵ� ����Ʈ
+	#쐻猷욎굲쐻猷욎굲쐻 쐻솇굲뱜 쐻猷욎굲쐻猷욎굲쐻猷욎굲쐻 쐻솯踰앹굲 쐻猷욎굲쐻猷욎굲뱜
 	chrmgr.RegisterCacheEffect(chrmgr.EFFECT_LOVE_PENDANT_EQUIP, "", "d:/ymir work/effect/etc/buff/buff_item4.mse")
 
 	chrmgr.RegisterCacheEffect(chrmgr.EFFECT_PENETRATE, "Bip01", "d:/ymir work/effect/hit/gwantong.mse")
@@ -261,8 +261,8 @@ def __InitData():
 	#chrmgr.RegisterCacheEffect(chrmgr.EFFECT_SUCCESS, "",			"season1/effect/success.mse")
 	#chrmgr.RegisterCacheEffect(chrmgr.EFFECT_FAIL, "",	"season1/effect/fail.mse")
 	
-	chrmgr.RegisterCacheEffect(chrmgr.EFFECT_LEVELUP_ON_14_FOR_GERMANY, "","season1/effect/paymessage_warning.mse")	#������ 14�϶� ( �������� )
-	chrmgr.RegisterCacheEffect(chrmgr.EFFECT_LEVELUP_UNDER_15_FOR_GERMANY, "", "season1/effect/paymessage_decide.mse" )#������ 15�϶� ( �������� )
+	chrmgr.RegisterCacheEffect(chrmgr.EFFECT_LEVELUP_ON_14_FOR_GERMANY, "","season1/effect/paymessage_warning.mse")	#쐻猷욎굲쐻猷욎굲쐻猷욎굲 14쐻뼣뵛굲 ( 쐻猷욎굲쐻猷욎굲쐻猷욎굲쐻猷욎굲 )
+	chrmgr.RegisterCacheEffect(chrmgr.EFFECT_LEVELUP_UNDER_15_FOR_GERMANY, "", "season1/effect/paymessage_decide.mse" )#쐻猷욎굲쐻猷욎굲쐻猷욎굲 15쐻뼣뵛굲 ( 쐻猷욎굲쐻猷욎굲쐻猷욎굲쐻猷욎굲 )
 
 	chrmgr.RegisterCacheEffect(chrmgr.EFFECT_PERCENT_DAMAGE1, "", "d:/ymir work/effect/hit/percent_damage1.mse")
 	chrmgr.RegisterCacheEffect(chrmgr.EFFECT_PERCENT_DAMAGE2, "", "d:/ymir work/effect/hit/percent_damage2.mse")
@@ -371,28 +371,28 @@ def __LoadGameEffect():
 	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+0, "Bip01", localeInfo.FN_GM_MARK)
 	# END_OF_LOCALE
 	
-	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+3, "Bip01", "d:/ymir work/effect/hit/blow_poison/poison_loop.mse") ## �ߵ�
+	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+3, "Bip01", "d:/ymir work/effect/hit/blow_poison/poison_loop.mse") ## 쐻솯踰앹굲
 	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+4, "", "d:/ymir work/effect/affect/slow.mse")
 	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+5, "Bip01 Head", "d:/ymir work/effect/etc/stun/stun_loop.mse")
 	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+6, "", "d:/ymir work/effect/etc/ready/ready.mse")
 	#chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+8, "", "d:/ymir work/guild/effect/10_construction.mse")
 	#chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+9, "", "d:/ymir work/guild/effect/20_construction.mse")
 	#chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+10, "", "d:/ymir work/guild/effect/20_upgrade.mse")
-	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+16, "", "d:/ymir work/pc/warrior/effect/gyeokgongjang_loop.mse") ## õ���� (�ؿ��� �ֵ�-_-)
-	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+17, "", "d:/ymir work/pc/assassin/effect/gyeonggong_loop.mse") ## �ڰ� - ���
+	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+16, "", "d:/ymir work/pc/warrior/effect/gyeokgongjang_loop.mse") ## 筌ｌ뭿쐻猷욎굲쐻猷욎굲 (쐻솋뒻굲쐻猷욎굲 쐻솂踰앹굲-_-)
+	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+17, "", "d:/ymir work/pc/assassin/effect/gyeonggong_loop.mse") ## 쐻솓ⓦ끉굲 - 쐻猷욎굲쐻
 	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+19, "Bip01 R Finger2", "d:/ymir work/pc/sura/effect/gwigeom_loop.mse")
-	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+20, "", "d:/ymir work/pc/sura/effect/fear_loop.mse") ## ���� - ����
-	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+21, "", "d:/ymir work/pc/sura/effect/jumagap_loop.mse") ## ���� - �ָ���
-	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+22, "", "d:/ymir work/pc/shaman/effect/3hosin_loop.mse") ## ���� - ȣ��
-	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+23, "", "d:/ymir work/pc/shaman/effect/boho_loop.mse") ## ���� - ��ȣ
-	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+24, "", "d:/ymir work/pc/shaman/effect/10kwaesok_loop.mse") ## ���� - ���
+	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+20, "", "d:/ymir work/pc/sura/effect/fear_loop.mse") ## 쐻猷욎굲쐻猷욎굲 - 쐻猷욎굲쐻猷욎굲
+	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+21, "", "d:/ymir work/pc/sura/effect/jumagap_loop.mse") ## 쐻猷욎굲쐻猷욎굲 - 쐻솂筌뤿슣굲쐻猷욎굲
+	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+22, "", "d:/ymir work/pc/shaman/effect/3hosin_loop.mse") ## 쐻猷욎굲쐻猷욎굲 - 깈쐻猷욎굲
+	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+23, "", "d:/ymir work/pc/shaman/effect/boho_loop.mse") ## 쐻猷욎굲쐻猷욎굲 - 쐻猷욎굲깈
+	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+24, "", "d:/ymir work/pc/shaman/effect/10kwaesok_loop.mse") ## 쐻猷욎굲쐻猷욎굲 - 쐻猷욎굲쐻
 	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+25, "", "d:/ymir work/pc/sura/effect/heuksin_loop.mse")
 	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+26, "", "d:/ymir work/pc/sura/effect/muyeong_loop.mse")
 	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+28, "Bip01", "d:/ymir work/effect/hit/blow_flame/flame_loop.mse")
 	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+29, "Bip01 R Hand", "d:/ymir work/pc/shaman/effect/6gicheon_hand.mse")
 	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+30, "Bip01 L Hand", "d:/ymir work/pc/shaman/effect/jeungryeok_hand.mse")
 	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+32, "Bip01 Head", "d:/ymir work/pc/sura/effect/pabeop_loop.mse")
-	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+33, "", "d:/ymir work/pc/warrior/effect/gyeokgongjang_loop.mse") ## õ���� (Fallen)
+	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+33, "", "d:/ymir work/pc/warrior/effect/gyeokgongjang_loop.mse") ## 筌ｌ뭿쐻猷욎굲쐻猷욎굲 (Fallen)
 	## 34 Polymoph
 	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+35, "", "d:/ymir work/effect/etc/guild_war_flag/flag_red.mse")
 	chrmgr.RegisterEffect(chrmgr.EFFECT_AFFECT+36, "", "d:/ymir work/effect/etc/guild_war_flag/flag_blue.mse")
@@ -426,53 +426,53 @@ def __LoadGameEffect():
 	chrmgr.RegisterEffect(chrmgr.EFFECT_REFINED+20, "Bip01", "D:/ymir work/pc/common/effect/armor/armor-4-2-2.mse")
 
 	## FlyData
-	effect.RegisterIndexedFlyData(effect.FLY_EXP, effect.INDEX_FLY_TYPE_NORMAL, "d:/ymir work/effect/etc/gathering/ga_piece_yellow_small2.msf")				## ����� (EXP)
-	effect.RegisterIndexedFlyData(effect.FLY_HP_MEDIUM, effect.INDEX_FLY_TYPE_NORMAL, "d:/ymir work/effect/etc/gathering/ga_piece_red_small.msf")			## ������ (HP) ������
-	effect.RegisterIndexedFlyData(effect.FLY_HP_BIG, effect.INDEX_FLY_TYPE_NORMAL, "d:/ymir work/effect/etc/gathering/ga_piece_red_big.msf")				## ������ (HP) ū��
-	effect.RegisterIndexedFlyData(effect.FLY_SP_SMALL, effect.INDEX_FLY_TYPE_NORMAL, "d:/ymir work/effect/etc/gathering/ga_piece_blue_warrior_small.msf")	## �Ķ��� ������ �ִ°�
-	effect.RegisterIndexedFlyData(effect.FLY_SP_MEDIUM, effect.INDEX_FLY_TYPE_NORMAL, "d:/ymir work/effect/etc/gathering/ga_piece_blue_small.msf")			## �Ķ��� ������
-	effect.RegisterIndexedFlyData(effect.FLY_SP_BIG, effect.INDEX_FLY_TYPE_NORMAL, "d:/ymir work/effect/etc/gathering/ga_piece_blue_big.msf")				## �Ķ��� ū��
-	effect.RegisterIndexedFlyData(effect.FLY_FIREWORK1, effect.INDEX_FLY_TYPE_FIRE_CRACKER, "d:/ymir work/effect/etc/firecracker/firecracker_1.msf")		## ���� 1
-	effect.RegisterIndexedFlyData(effect.FLY_FIREWORK2, effect.INDEX_FLY_TYPE_FIRE_CRACKER, "d:/ymir work/effect/etc/firecracker/firecracker_2.msf")		## ���� 2
-	effect.RegisterIndexedFlyData(effect.FLY_FIREWORK3, effect.INDEX_FLY_TYPE_FIRE_CRACKER, "d:/ymir work/effect/etc/firecracker/firecracker_3.msf")		## ���� 3
-	effect.RegisterIndexedFlyData(effect.FLY_FIREWORK4, effect.INDEX_FLY_TYPE_FIRE_CRACKER, "d:/ymir work/effect/etc/firecracker/firecracker_4.msf")		## ���� 4
-	effect.RegisterIndexedFlyData(effect.FLY_FIREWORK5, effect.INDEX_FLY_TYPE_FIRE_CRACKER, "d:/ymir work/effect/etc/firecracker/firecracker_5.msf")		## ���� 5
-	effect.RegisterIndexedFlyData(effect.FLY_FIREWORK6, effect.INDEX_FLY_TYPE_FIRE_CRACKER, "d:/ymir work/effect/etc/firecracker/firecracker_6.msf")		## ���� 6
-	effect.RegisterIndexedFlyData(effect.FLY_FIREWORK_XMAS, effect.INDEX_FLY_TYPE_FIRE_CRACKER, "d:/ymir work/effect/etc/firecracker/firecracker_xmas.msf")	## ���� X-Mas
-	effect.RegisterIndexedFlyData(effect.FLY_CHAIN_LIGHTNING, effect.INDEX_FLY_TYPE_NORMAL, "d:/ymir work/pc/shaman/effect/pokroe.msf")						## ���ڰ�
-	effect.RegisterIndexedFlyData(effect.FLY_HP_SMALL, effect.INDEX_FLY_TYPE_NORMAL, "d:/ymir work/effect/etc/gathering/ga_piece_red_smallest.msf")			## ������ �ſ� ������
-	effect.RegisterIndexedFlyData(effect.FLY_SKILL_MUYEONG, effect.INDEX_FLY_TYPE_AUTO_FIRE, "d:/ymir work/pc/sura/effect/muyeong_fly.msf")					## ������
+	effect.RegisterIndexedFlyData(effect.FLY_EXP, effect.INDEX_FLY_TYPE_NORMAL, "d:/ymir work/effect/etc/gathering/ga_piece_yellow_small2.msf")				## 쐻猷욎굲쐻猷욎굲쐻 (EXP)
+	effect.RegisterIndexedFlyData(effect.FLY_HP_MEDIUM, effect.INDEX_FLY_TYPE_NORMAL, "d:/ymir work/effect/etc/gathering/ga_piece_red_small.msf")			## 쐻猷욎굲쐻猷욎굲쐻猷욎굲 (HP) 쐻猷욎굲쐻猷욎굲쐻猷욎굲
+	effect.RegisterIndexedFlyData(effect.FLY_HP_BIG, effect.INDEX_FLY_TYPE_NORMAL, "d:/ymir work/effect/etc/gathering/ga_piece_red_big.msf")				## 쐻猷욎굲쐻猷욎굲쐻猷욎굲 (HP) 寃숇쐻猷욎굲
+	effect.RegisterIndexedFlyData(effect.FLY_SP_SMALL, effect.INDEX_FLY_TYPE_NORMAL, "d:/ymir work/effect/etc/gathering/ga_piece_blue_warrior_small.msf")	## 쐻뻼뵛굲쐻猷욎굲 쐻猷욎굲쐻猷욎굲쐻猷욎굲 쐻솂뮉ⓦ끉굲
+	effect.RegisterIndexedFlyData(effect.FLY_SP_MEDIUM, effect.INDEX_FLY_TYPE_NORMAL, "d:/ymir work/effect/etc/gathering/ga_piece_blue_small.msf")			## 쐻뻼뵛굲쐻猷욎굲 쐻猷욎굲쐻猷욎굲쐻猷욎굲
+	effect.RegisterIndexedFlyData(effect.FLY_SP_BIG, effect.INDEX_FLY_TYPE_NORMAL, "d:/ymir work/effect/etc/gathering/ga_piece_blue_big.msf")				## 쐻뻼뵛굲쐻猷욎굲 寃숇쐻猷욎굲
+	effect.RegisterIndexedFlyData(effect.FLY_FIREWORK1, effect.INDEX_FLY_TYPE_FIRE_CRACKER, "d:/ymir work/effect/etc/firecracker/firecracker_1.msf")		## 쐻猷욎굲쐻猷욎굲 1
+	effect.RegisterIndexedFlyData(effect.FLY_FIREWORK2, effect.INDEX_FLY_TYPE_FIRE_CRACKER, "d:/ymir work/effect/etc/firecracker/firecracker_2.msf")		## 쐻猷욎굲쐻猷욎굲 2
+	effect.RegisterIndexedFlyData(effect.FLY_FIREWORK3, effect.INDEX_FLY_TYPE_FIRE_CRACKER, "d:/ymir work/effect/etc/firecracker/firecracker_3.msf")		## 쐻猷욎굲쐻猷욎굲 3
+	effect.RegisterIndexedFlyData(effect.FLY_FIREWORK4, effect.INDEX_FLY_TYPE_FIRE_CRACKER, "d:/ymir work/effect/etc/firecracker/firecracker_4.msf")		## 쐻猷욎굲쐻猷욎굲 4
+	effect.RegisterIndexedFlyData(effect.FLY_FIREWORK5, effect.INDEX_FLY_TYPE_FIRE_CRACKER, "d:/ymir work/effect/etc/firecracker/firecracker_5.msf")		## 쐻猷욎굲쐻猷욎굲 5
+	effect.RegisterIndexedFlyData(effect.FLY_FIREWORK6, effect.INDEX_FLY_TYPE_FIRE_CRACKER, "d:/ymir work/effect/etc/firecracker/firecracker_6.msf")		## 쐻猷욎굲쐻猷욎굲 6
+	effect.RegisterIndexedFlyData(effect.FLY_FIREWORK_XMAS, effect.INDEX_FLY_TYPE_FIRE_CRACKER, "d:/ymir work/effect/etc/firecracker/firecracker_xmas.msf")	## 쐻猷욎굲쐻猷욎굲 X-Mas
+	effect.RegisterIndexedFlyData(effect.FLY_CHAIN_LIGHTNING, effect.INDEX_FLY_TYPE_NORMAL, "d:/ymir work/pc/shaman/effect/pokroe.msf")						## 쐻猷욎굲쐻솓ⓦ끉굲
+	effect.RegisterIndexedFlyData(effect.FLY_HP_SMALL, effect.INDEX_FLY_TYPE_NORMAL, "d:/ymir work/effect/etc/gathering/ga_piece_red_smallest.msf")			## 쐻猷욎굲쐻猷욎굲쐻猷욎굲 쐻뻿뒻굲 쐻猷욎굲쐻猷욎굲쐻猷욎굲
+	effect.RegisterIndexedFlyData(effect.FLY_SKILL_MUYEONG, effect.INDEX_FLY_TYPE_AUTO_FIRE, "d:/ymir work/pc/sura/effect/muyeong_fly.msf")					## 쐻猷욎굲쐻猷욎굲쐻猷욎굲
 
 	#########################################################################################
 	## Emoticon
 	EmoticonStr = "d:/ymir work/effect/etc/emoticon/"
 
 	chrmgr.RegisterEffect(chrmgr.EFFECT_EMOTICON+0, "", EmoticonStr+"sweat.mse")
-	net.RegisterEmoticonString("(Ȳ��)")
+	net.RegisterEmoticonString("(넺쐻猷욎굲)")
 
 	chrmgr.RegisterEffect(chrmgr.EFFECT_EMOTICON+1, "", EmoticonStr+"money.mse")
-	net.RegisterEmoticonString("(��)")
+	net.RegisterEmoticonString("(쐻猷욎굲)")
 
 	chrmgr.RegisterEffect(chrmgr.EFFECT_EMOTICON+2, "", EmoticonStr+"happy.mse")
-	net.RegisterEmoticonString("(���)")
+	net.RegisterEmoticonString("(쐻猷욎굲쐻)")
 
 	chrmgr.RegisterEffect(chrmgr.EFFECT_EMOTICON+3, "", EmoticonStr+"love_s.mse")
-	net.RegisterEmoticonString("(����)")
+	net.RegisterEmoticonString("(쐻猷욎굲쐻猷욎굲)")
 
 	chrmgr.RegisterEffect(chrmgr.EFFECT_EMOTICON+4, "", EmoticonStr+"love_l.mse")
-	net.RegisterEmoticonString("(���)")
+	net.RegisterEmoticonString("(쐻猷욎굲쐻)")
 
 	chrmgr.RegisterEffect(chrmgr.EFFECT_EMOTICON+5, "", EmoticonStr+"angry.mse")
-	net.RegisterEmoticonString("(�г�)")
+	net.RegisterEmoticonString("(쐻뼦꺋굲)")
 
 	chrmgr.RegisterEffect(chrmgr.EFFECT_EMOTICON+6, "", EmoticonStr+"aha.mse")
-	net.RegisterEmoticonString("(����)")
+	net.RegisterEmoticonString("(쐻猷욎굲쐻猷욎굲)")
 
 	chrmgr.RegisterEffect(chrmgr.EFFECT_EMOTICON+7, "", EmoticonStr+"gloom.mse")
-	net.RegisterEmoticonString("(���)")
+	net.RegisterEmoticonString("(쐻猷욎굲쐻)")
 
 	chrmgr.RegisterEffect(chrmgr.EFFECT_EMOTICON+8, "", EmoticonStr+"sorry.mse")
-	net.RegisterEmoticonString("(�˼�)")
+	net.RegisterEmoticonString("(쐻뼑닰굲)")
 
 	chrmgr.RegisterEffect(chrmgr.EFFECT_EMOTICON+9, "", EmoticonStr+"!_mix_back.mse")
 	net.RegisterEmoticonString("(!)")
@@ -1138,7 +1138,7 @@ def __LoadGameShamanEx(race, path):
 	#chrmgr.RegisterCacheMotionData(chr.MOTION_MODE_GENERAL, chr.MOTION_SKILL+10,	"budong.msa")
 
 	START_INDEX = 0
-	#skill.SKILL_EFFECT_COUNT ����//
+	#skill.SKILL_EFFECT_COUNT 쐻猷욎굲쐻猷욎굲//
 	for i in (1, 2, 3):
 		END_STRING = ""
 		if i != 0: END_STRING = "_%d" % (i+1)
@@ -1345,7 +1345,7 @@ def LoadGuildBuildingList(filename):
 				elif itemID == uiGuild.MATERIAL_PLYWOOD_ID:
 					materialList[uiGuild.MATERIAL_PLYWOOD_INDEX] = count
 
-		## GuildSymbol �� �Ϲ� NPC ��� �Բ� ����Ѵ�.
+		## GuildSymbol 쐻猷욎굲 쐻뼣獄袁⑹굲 NPC 쐻猷욎굲쐻 쐻셾癒굲 쐻猷욎굲쐻猷욎굲遙λ쐻.
 		import chrmgr
 		chrmgr.RegisterRaceSrcName(name, folderName)
 		chrmgr.RegisterRaceName(vnum, name)

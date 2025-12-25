@@ -233,7 +233,7 @@ class CubeWindow(ui.ScriptWindow):
 		self.tooltipItem.AddItemData(itemVnum, metinSlot, attrSlot)
 		
 
-	# Àç·á¸¦ Å¬¸¯ÇÏ¸é ÀÎº¥Åä¸®¿¡¼­ ÇØ´ç ¾ÆÀÌÅÛÀ» Ã£¾Æ¼­ µî·ÏÇÔ.
+	# ì¬ë£Œë¥¼ í´ë¦­í•˜ë©´ ì¸ë²¤í† ë¦¬ì—ì„œ í•´ë‹¹ ì•„ì´í…œì„ ì°¾ì•„ì„œ ë“±ë¡í•¨.
 	def __OnSelectMaterialSlot(self, trash, resultIndex, materialIndex):
 		resultIndex = resultIndex + self.firstSlotIndex
 		if resultIndex not in self.cubeMaterialInfos:
@@ -246,18 +246,18 @@ class CubeWindow(ui.ScriptWindow):
 			return
 
 		for itemVnum, itemCount in materialInfo[materialIndex]:
-			bAddedNow = False	# ÀÌ¹ø¿¡ Å¬¸¯ÇÔÀ¸·Î½á ¾ÆÀÌÅÛÀÌ Ãß°¡µÇ¾ú³ª?
+			bAddedNow = False	# ì´ë²ˆì— í´ë¦­í•¨ìœ¼ë¡œì¨ ì•„ì´í…œì´ ì¶”ê°€ë˜ì—ˆë‚˜?
 			item.SelectItem(itemVnum)
 			itemSizeX, itemSizeY = item.GetItemSize()
 
-			# Á¦Á¶¿¡ ÇÊ¿äÇÑ ¸¸Å­ÀÇ Àç·á¸¦ °¡Áö°í ÀÖ´Â°¡?
+			# ì œì¡°ì— í•„ìš”í•œ ë§Œí¼ì˜ ì¬ë£Œë¥¼ ê°€ì§€ê³  ìˆëŠ”ê°€?
 			if player.GetItemCountByVnum(itemVnum) >= itemCount:
 				for i in xrange(player.INVENTORY_SLOT_COUNT):
 					vnum = player.GetItemIndex(i)
 					count= player.GetItemCount(i)
 
 					if vnum == itemVnum and count >= itemCount:
-						# ÀÌ¹Ì °°Àº ¾ÆÀÌÅÛÀÌ µî·ÏµÇ¾î ÀÖ´ÂÁö °Ë»çÇÏ°í, ¾ø´Ù¸é Ãß°¡ÇÔ
+						# ì´ë¯¸ ê°™ì€ ì•„ì´í…œì´ ë“±ë¡ë˜ì–´ ìˆëŠ”ì§€ ê²€ì‚¬í•˜ê³ , ì—†ë‹¤ë©´ ì¶”ê°€í•¨
 						bAlreadyExists = False
 						for slotPos, invenPos in self.cubeItemInfo.items():
 							if invenPos == i:
@@ -268,17 +268,17 @@ class CubeWindow(ui.ScriptWindow):
 
 						#print "Cube Status : ", self.cubeItemInfo
 
-						# ¿©±â ÁøÀÔÇÏ¸é Å¥ºê¿¡ µî·ÏµÇÁö ¾ÊÀº ¾ÆÀÌÅÛÀÌ¹Ç·Î, ºó Å¥ºê ½½·Ô¿¡ ÇØ´ç ¾ÆÀÌÅÛ Ãß°¡
+						# ì—¬ê¸° ì§„ì…í•˜ë©´ íë¸Œì— ë“±ë¡ë˜ì§€ ì•Šì€ ì•„ì´í…œì´ë¯€ë¡œ, ë¹ˆ íë¸Œ ìŠ¬ë¡¯ì— í•´ë‹¹ ì•„ì´í…œ ì¶”ê°€
 						bCanAddSlot = False
 						for slotPos in xrange(self.cubeSlot.GetSlotCount()):
-							# ÀÌ Å¥ºê ½½·ÔÀÌ ºñ¾îÀÖ´Â°¡?
+							# ì´ íë¸Œ ìŠ¬ë¡¯ì´ ë¹„ì–´ìˆëŠ”ê°€?
 							if not slotPos in self.cubeItemInfo:
 								upperColumnItemSizeY = -1
 								currentSlotLine = int(slotPos / self.CUBE_SLOT_COUNTX)
 								cubeColumn = int(slotPos % self.CUBE_SLOT_COUNTX)
 
 
-								# ¸¸¾à Å¥ºê¿¡ 3Ä­Â¥¸® ¾ÆÀÌÅÛÀÌ µî·ÏµÇ¾î ÀÖ´Ù¸é, ÀÌ ¿­(column)Àº ´õ ÀÌ»ó º¼ °Íµµ ¾øÀÌ ³Ñ¾î°£´Ù
+								# ë§Œì•½ íë¸Œì— 3ì¹¸ì§œë¦¬ ì•„ì´í…œì´ ë“±ë¡ë˜ì–´ ìˆë‹¤ë©´, ì´ ì—´(column)ì€ ë” ì´ìƒ ë³¼ ê²ƒë„ ì—†ì´ ë„˜ì–´ê°„ë‹¤
 								if cubeColumn in self.cubeItemInfo:
 									columnVNUM = player.GetItemIndex(self.cubeItemInfo[cubeColumn])
 									item.SelectItem(columnVNUM)
@@ -292,7 +292,7 @@ class CubeWindow(ui.ScriptWindow):
 									item.SelectItem(upperColumnVNUM)
 									columnItemSizeX, upperColumnItemSizeY = item.GetItemSize()
 								
-								# 1Ä­Â¥¸® ¾ÆÀÌÅÛÀº ¹Ù·Î À­ÁÙ¿¡ ÇÑÄ­Â¥¸® ¾ÆÀÌÅÛÀÌ ÀÖ¾î¾ß ÇÔ
+								# 1ì¹¸ì§œë¦¬ ì•„ì´í…œì€ ë°”ë¡œ ìœ—ì¤„ì— í•œì¹¸ì§œë¦¬ ì•„ì´í…œì´ ìˆì–´ì•¼ í•¨
 								if 1 == itemSizeY: 
 									if 0 == currentSlotLine:
 										bCanAddSlot = True
@@ -300,13 +300,13 @@ class CubeWindow(ui.ScriptWindow):
 										bCanAddSlot = True
 									elif 2 == currentSlotLine:
 										bCanAddSlot = True
-								# 2Ä­Â¥¸® ¾ÆÀÌÅÛÀº À§¾Æ·¡°¡ ºñ¾îÀÖ¾î¾ß ÇÔ
+								# 2ì¹¸ì§œë¦¬ ì•„ì´í…œì€ ìœ„ì•„ë˜ê°€ ë¹„ì–´ìˆì–´ì•¼ í•¨
 								elif 2 == itemSizeY:
 									if 0 == currentSlotLine and not cubeColumn + self.CUBE_SLOT_COUNTX in self.cubeItemInfo:
 										bCanAddSlot = True
 									elif 1 == currentSlotLine and 1 == upperColumnItemSizeY and not cubeColumn + (self.CUBE_SLOT_COUNTX * 2) in self.cubeItemInfo:
 										bCanAddSlot = True
-								# 3Ä­Â¥¸® ¾ÆÀÌÅÛÀº ÇØ´ç Column ÀÚÃ¼°¡ ¸ğµÎ ºñ¾îÀÖ¾î¾ß ÇÔ
+								# 3ì¹¸ì§œë¦¬ ì•„ì´í…œì€ í•´ë‹¹ Column ìì²´ê°€ ëª¨ë‘ ë¹„ì–´ìˆì–´ì•¼ í•¨
 								else:
 									if not cubeColumn in self.cubeItemInfo and not cubeColumn + self.CUBE_SLOT_COUNTX in self.cubeItemInfo and not cubeColumn + (self.CUBE_SLOT_COUNTX * 2) in self.cubeItemInfo:
 										bCanAddSlot = True
@@ -475,17 +475,17 @@ class CubeWindow(ui.ScriptWindow):
 		if self.isUsable:
 			self.isUsable = False
 
-			print "Å¥ºê ´İ±â"
+			print "íë¸Œ ë‹«ê¸°"
 			net.SendChatPacket("/cube close")
 
 		self.Close()
 
 	def __OnAcceptButtonClick(self):
 		if len(self.cubeItemInfo) == 0:
-			"ºó Å¥ºê"
+			"ë¹ˆ íë¸Œ"
 			return
 		
-		print "Å¥ºê Á¦ÀÛ ½ÃÀÛ"		
+		print "íë¸Œ ì œì‘ ì‹œì‘"		
 		#for invenPos in self.cubeItemInfo.values():
 		#	net.SendChatPacket("/cube add " + str(invenPos))
 		net.SendChatPacket("/cube make")			

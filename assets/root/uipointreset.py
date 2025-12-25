@@ -30,15 +30,15 @@ class PointResetDialog(ui.ScriptWindow):
 			import exception
 			exception.Abort("PointResetDialog.LoadWindow.BindObject")
 
-		self.GetChild("message1").SetText("½ºÅÈ/½ºÅ³ Æ÷ÀÎÆ®¸¦ ÃÊ±âÈ­ÇØÁÖ°Ú³×.")
-		self.GetChild("message2").SetText("°¡°İÀº 500¿øÀÌ¾ß. ¾î¶§, ÃÊ±âÈ­ÇÒÅÙ°¡?")
+		self.GetChild("message1").SetText("ìŠ¤íƒ¯/ìŠ¤í‚¬ í¬ì¸íŠ¸ë¥¼ ì´ˆê¸°í™”í•´ì£¼ê² ë„¤.")
+		self.GetChild("message2").SetText("ê°€ê²©ì€ 500ì›ì´ì•¼. ì–´ë•Œ, ì´ˆê¸°í™”í• í…ê°€?")
 		self.GetChild("accept").SetEvent(ui.__mem_func__(self.OpenConfirmDialog))
 		self.GetChild("cancel").SetEvent(ui.__mem_func__(self.Close))
 
 		## Confirm Dialog
-		self.ConfirmText.SetText("ÇöÀç ·¹º§ÀÇ °æÇèÄ¡°¡ ¸ğµÎ ¾ø¾îÁø´Ù³×.")
+		self.ConfirmText.SetText("í˜„ì¬ ë ˆë²¨ì˜ ê²½í—˜ì¹˜ê°€ ëª¨ë‘ ì—†ì–´ì§„ë‹¤ë„¤.")
 		self.ConfirmText.SetFontColor(1.0, 0.3, 0.3)
-		self.ConfirmText2.SetText("Á¤¸» ÃÊ±âÈ­ÇÏ°í ½ÍÀº°¡?")
+		self.ConfirmText2.SetText("ì •ë§ ì´ˆê¸°í™”í•˜ê³  ì‹¶ì€ê°€?")
 		self.ConfirmAcceptButton.SetEvent(ui.__mem_func__(self.ResetPoint))
 		self.ConfirmCancelButton.SetEvent(ui.__mem_func__(self.Close))
 

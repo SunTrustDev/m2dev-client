@@ -57,8 +57,8 @@ def SplitDescription(desc, limit):
 ###################################################################################################
 ## ToolTip
 ##
-##   NOTE : ÇöÀç´Â Item°ú SkillÀ» »ó¼ÓÀ¸·Î Æ¯È­ ½ÃÄÑµÎ¾úÀ½
-##          ÇÏÁö¸¸ ±×´ÙÁö ÀÇ¹Ì°¡ ¾ø¾î º¸ÀÓ
+##   NOTE : í˜„ì¬ëŠ” Itemê³¼ Skillì„ ìƒì†ìœ¼ë¡œ íŠ¹í™” ì‹œì¼œë‘ì—ˆìŒ
+##          í•˜ì§€ë§Œ ê·¸ë‹¤ì§€ ì˜ë¯¸ê°€ ì—†ì–´ ë³´ì„
 ##
 class ToolTip(ui.ThinBoard):
 
@@ -462,7 +462,7 @@ class ItemToolTip(ToolTip):
 		self.itemVnum = 0
 		self.isShopItem = False
 
-		# ¾ÆÀÌÅÛ ÅøÆÁÀ» Ç¥½ÃÇÒ ¶§ ÇöÀç Ä³¸¯ÅÍ°¡ Âø¿ëÇÒ ¼ö ¾ø´Â ¾ÆÀÌÅÛÀÌ¶ó¸é °­Á¦·Î Disable Color·Î ¼³Á¤ (ÀÌ¹Ì ±×·¸°Ô ÀÛµ¿ÇÏ°í ÀÖÀ¸³ª ²¨¾ß ÇÒ ÇÊ¿ä°¡ ÀÖ¾î¼­)
+		# ì•„ì´í…œ íˆ´íŒì„ í‘œì‹œí•  ë•Œ í˜„ì¬ ìºë¦­í„°ê°€ ì°©ìš©í•  ìˆ˜ ì—†ëŠ” ì•„ì´í…œì´ë¼ë©´ ê°•ì œë¡œ Disable Colorë¡œ ì„¤ì • (ì´ë¯¸ ê·¸ë ‡ê²Œ ì‘ë™í•˜ê³  ìˆìœ¼ë‚˜ êº¼ì•¼ í•  í•„ìš”ê°€ ìˆì–´ì„œ)
 		self.bCannotUseItemForceSetDisableColor = True 
 
 	def __del__(self):
@@ -886,7 +886,7 @@ class ItemToolTip(ToolTip):
 
 			self.AppendSpace(5)
 
-			## ºÎÃ¤ÀÏ °æ¿ì ¸¶°øÀ» ¸ÕÀú Ç¥½ÃÇÑ´Ù.
+			## ë¶€ì±„ì¼ ê²½ìš° ë§ˆê³µì„ ë¨¼ì € í‘œì‹œí•œë‹¤.
 			if item.WEAPON_FAN == itemSubType:
 				self.__AppendMagicAttackInfo()
 				self.__AppendAttackPowerInfo()
@@ -905,9 +905,9 @@ class ItemToolTip(ToolTip):
 		elif item.ITEM_TYPE_ARMOR == itemType:
 			self.__AppendLimitInformation()
 
-			## ¹æ¾î·Â
+			## ë°©ì–´ë ¥
 			defGrade = item.GetValue(1)
-			defBonus = item.GetValue(5)*2 ## ¹æ¾î·Â Ç¥½Ã Àß¸ø µÇ´Â ¹®Á¦¸¦ ¼öÁ¤
+			defBonus = item.GetValue(5)*2 ## ë°©ì–´ë ¥ í‘œì‹œ ì˜ëª» ë˜ëŠ” ë¬¸ì œë¥¼ ìˆ˜ì •
 			if defGrade > 0:
 				self.AppendSpace(5)
 				self.AppendTextLine(localeInfo.TOOLTIP_ITEM_DEF_GRADE % (defGrade+defBonus), self.GetChangeTextLineColor(defGrade))
@@ -929,7 +929,7 @@ class ItemToolTip(ToolTip):
 			self.__AppendAffectInformation()
 			self.__AppendAttributeInformation(attrSlot)
 
-			#¹İÁö ¼ÒÄÏ ½Ã½ºÅÛ °ü·ÃÇØ¼± ¾ÆÁ÷ ±âÈ¹ ¹ÌÁ¤
+			#ë°˜ì§€ ì†Œì¼“ ì‹œìŠ¤í…œ ê´€ë ¨í•´ì„  ì•„ì§ ê¸°íš ë¯¸ì •
 			#self.__AppendAccessoryMetinSlotInfo(metinSlot, 99001)
 			
 
@@ -941,7 +941,7 @@ class ItemToolTip(ToolTip):
 
 			self.__AppendAccessoryMetinSlotInfo(metinSlot, constInfo.GET_BELT_MATERIAL_VNUM(itemVnum))
 
-		## ÄÚ½ºÃõ ¾ÆÀÌÅÛ ##
+		## ì½”ìŠ¤ì¸” ì•„ì´í…œ ##
 		elif 0 != isCostumeItem:
 			self.__AppendLimitInformation()
 			self.__AppendAffectInformation()
@@ -951,14 +951,14 @@ class ItemToolTip(ToolTip):
 		
 			bHasRealtimeFlag = 0
 			
-			## »ç¿ë°¡´É ½Ã°£ Á¦ÇÑÀÌ ÀÖ´ÂÁö Ã£¾Æº¸°í
+			## ì‚¬ìš©ê°€ëŠ¥ ì‹œê°„ ì œí•œì´ ìˆëŠ”ì§€ ì°¾ì•„ë³´ê³ 
 			for i in xrange(item.LIMIT_MAX_NUM):
 				(limitType, limitValue) = item.GetLimit(i)
 
 				if item.LIMIT_REAL_TIME == limitType:
 					bHasRealtimeFlag = 1
 			
-			## ÀÖ´Ù¸é °ü·Ã Á¤º¸¸¦ Ç¥½ÃÇÔ. ex) ³²Àº ½Ã°£ : 6ÀÏ 6½Ã°£ 58ºĞ 
+			## ìˆë‹¤ë©´ ê´€ë ¨ ì •ë³´ë¥¼ í‘œì‹œí•¨. ex) ë‚¨ì€ ì‹œê°„ : 6ì¼ 6ì‹œê°„ 58ë¶„ 
 			if 1 == bHasRealtimeFlag:
 				self.AppendMallItemLastTime(metinSlot[0])
 				#dbg.TraceError("1) REAL_TIME flag On ")
@@ -1048,7 +1048,7 @@ class ItemToolTip(ToolTip):
 				else:
 					time = metinSlot[player.METIN_SOCKET_MAX_NUM-1]
 
-					if 1 == item.GetValue(2): ## ½Ç½Ã°£ ÀÌ¿ë Flag / ÀåÂø ¾ÈÇØµµ ÁØ´Ù
+					if 1 == item.GetValue(2): ## ì‹¤ì‹œê°„ ì´ìš© Flag / ì¥ì°© ì•ˆí•´ë„ ì¤€ë‹¤
 						self.AppendMallItemLastTime(time)
 					else:
 						self.AppendUniqueItemLastTime(time)
@@ -1064,7 +1064,7 @@ class ItemToolTip(ToolTip):
 				self.__AppendAbilityPotionInformation()
 
 
-			## ¿µ¼® °¨Áö±â
+			## ì˜ì„ ê°ì§€ê¸°
 			if 27989 == itemVnum or 76006 == itemVnum:
 				if 0 != metinSlot:
 					useCount = int(metinSlot[0])
@@ -1072,7 +1072,7 @@ class ItemToolTip(ToolTip):
 					self.AppendSpace(5)
 					self.AppendTextLine(localeInfo.TOOLTIP_REST_USABLE_COUNT % (6 - useCount), self.NORMAL_COLOR)
 
-			## ÀÌº¥Æ® °¨Áö±â
+			## ì´ë²¤íŠ¸ ê°ì§€ê¸°
 			elif 50004 == itemVnum:
 				if 0 != metinSlot:
 					useCount = int(metinSlot[0])
@@ -1080,10 +1080,10 @@ class ItemToolTip(ToolTip):
 					self.AppendSpace(5)
 					self.AppendTextLine(localeInfo.TOOLTIP_REST_USABLE_COUNT % (10 - useCount), self.NORMAL_COLOR)
 
-			## ÀÚµ¿¹°¾à
+			## ìë™ë¬¼ì•½
 			elif constInfo.IS_AUTO_POTION(itemVnum):
 				if 0 != metinSlot:
-					## 0: È°¼ºÈ­, 1: »ç¿ë·®, 2: ÃÑ·®
+					## 0: í™œì„±í™”, 1: ì‚¬ìš©ëŸ‰, 2: ì´ëŸ‰
 					isActivated = int(metinSlot[0])
 					usedAmount = float(metinSlot[1])
 					totalAmount = float(metinSlot[2])
@@ -1099,7 +1099,7 @@ class ItemToolTip(ToolTip):
 						
 					self.AppendTextLine(localeInfo.TOOLTIP_AUTO_POTION_REST % (100.0 - ((usedAmount / totalAmount) * 100.0)), self.POSITIVE_COLOR)
 								
-			## ±ÍÈ¯ ±â¾ïºÎ
+			## ê·€í™˜ ê¸°ì–µë¶€
 			elif itemVnum in WARP_SCROLLS:
 				if 0 != metinSlot:
 					xPos = int(metinSlot[0])
@@ -1127,16 +1127,16 @@ class ItemToolTip(ToolTip):
 					if item.LIMIT_REAL_TIME == limitType:
 						bHasRealtimeFlag = 1
 		
-				## ÀÖ´Ù¸é °ü·Ã Á¤º¸¸¦ Ç¥½ÃÇÔ. ex) ³²Àº ½Ã°£ : 6ÀÏ 6½Ã°£ 58ºĞ 
+				## ìˆë‹¤ë©´ ê´€ë ¨ ì •ë³´ë¥¼ í‘œì‹œí•¨. ex) ë‚¨ì€ ì‹œê°„ : 6ì¼ 6ì‹œê°„ 58ë¶„ 
 				if 1 == bHasRealtimeFlag:
 					self.AppendMallItemLastTime(metinSlot[0])
 				else:
-					# ... ÀÌ°Å... ¼­¹ö¿¡´Â ÀÌ·± ½Ã°£ Ã¼Å© ¾ÈµÇ¾î ÀÖ´Âµ¥...
-					# ¿Ö ÀÌ·±°Ô ÀÖ´ÂÁö ¾ËÁö´Â ¸øÇÏ³ª ±×³É µÎÀÚ...
+					# ... ì´ê±°... ì„œë²„ì—ëŠ” ì´ëŸ° ì‹œê°„ ì²´í¬ ì•ˆë˜ì–´ ìˆëŠ”ë°...
+					# ì™œ ì´ëŸ°ê²Œ ìˆëŠ”ì§€ ì•Œì§€ëŠ” ëª»í•˜ë‚˜ ê·¸ëƒ¥ ë‘ì...
 					if 0 != metinSlot:
 						time = metinSlot[player.METIN_SOCKET_MAX_NUM-1]
 
-						## ½Ç½Ã°£ ÀÌ¿ë Flag
+						## ì‹¤ì‹œê°„ ì´ìš© Flag
 						if 1 == item.GetValue(2):
 							self.AppendMallItemLastTime(time)
 			
@@ -1152,7 +1152,7 @@ class ItemToolTip(ToolTip):
 				else:
 					self.AppendTextLine(localeInfo.TOOLTIP_TIME_CHARGER_PER(item.GetValue(0)))
  		
-				## ÀÖ´Ù¸é °ü·Ã Á¤º¸¸¦ Ç¥½ÃÇÔ. ex) ³²Àº ½Ã°£ : 6ÀÏ 6½Ã°£ 58ºĞ 
+				## ìˆë‹¤ë©´ ê´€ë ¨ ì •ë³´ë¥¼ í‘œì‹œí•¨. ex) ë‚¨ì€ ì‹œê°„ : 6ì¼ 6ì‹œê°„ 58ë¶„ 
 				if 1 == bHasRealtimeFlag:
 					self.AppendMallItemLastTime(metinSlot[0])
 
@@ -1168,7 +1168,7 @@ class ItemToolTip(ToolTip):
 				else:
 					self.AppendTextLine(localeInfo.TOOLTIP_TIME_CHARGER_FIX(item.GetValue(0)))
 		
-				## ÀÖ´Ù¸é °ü·Ã Á¤º¸¸¦ Ç¥½ÃÇÔ. ex) ³²Àº ½Ã°£ : 6ÀÏ 6½Ã°£ 58ºĞ 
+				## ìˆë‹¤ë©´ ê´€ë ¨ ì •ë³´ë¥¼ í‘œì‹œí•¨. ex) ë‚¨ì€ ì‹œê°„ : 6ì¼ 6ì‹œê°„ 58ë¶„ 
 				if 1 == bHasRealtimeFlag:
 					self.AppendMallItemLastTime(metinSlot[0])
 
@@ -1217,7 +1217,7 @@ class ItemToolTip(ToolTip):
 			return ""
 
 
-	## Çì¾îÀÎ°¡?
+	## í—¤ì–´ì¸ê°€?
 	def __IsHair(self, itemVnum):
 		return (self.__IsOldHair(itemVnum) or 
 			self.__IsNewHair(itemVnum) or
@@ -1254,7 +1254,7 @@ class ItemToolTip(ToolTip):
 			itemImage.LoadImage("d:/ymir work/item/quest/"+str(itemVnum)+".tga")
 		elif self.__IsNewHair3(itemVnum):
 			itemImage.LoadImage("icon/hair/%d.sub" % (itemVnum))
-		elif self.__IsNewHair(itemVnum): # ±âÁ¸ Çì¾î ¹øÈ£¸¦ ¿¬°á½ÃÄÑ¼­ »ç¿ëÇÑ´Ù. »õ·Î¿î ¾ÆÀÌÅÛÀº 1000¸¸Å­ ¹øÈ£°¡ ´Ã¾ú´Ù.
+		elif self.__IsNewHair(itemVnum): # ê¸°ì¡´ í—¤ì–´ ë²ˆí˜¸ë¥¼ ì—°ê²°ì‹œì¼œì„œ ì‚¬ìš©í•œë‹¤. ìƒˆë¡œìš´ ì•„ì´í…œì€ 1000ë§Œí¼ ë²ˆí˜¸ê°€ ëŠ˜ì—ˆë‹¤.
 			itemImage.LoadImage("d:/ymir work/item/quest/"+str(itemVnum-1000)+".tga")
 		elif self.__IsNewHair2(itemVnum):
 			itemImage.LoadImage("icon/hair/%d.sub" % (itemVnum))
@@ -1267,7 +1267,7 @@ class ItemToolTip(ToolTip):
 		self.childrenList.append(itemImage)
 		self.ResizeToolTip()
 
-	## »çÀÌÁî°¡ Å« Description ÀÏ °æ¿ì ÅøÆÁ »çÀÌÁî¸¦ Á¶Á¤ÇÑ´Ù
+	## ì‚¬ì´ì¦ˆê°€ í° Description ì¼ ê²½ìš° íˆ´íŒ ì‚¬ì´ì¦ˆë¥¼ ì¡°ì •í•œë‹¤
 	def __AdjustMaxWidth(self, attrSlot, desc):
 		newToolTipWidth = self.toolTipWidth
 		newToolTipWidth = max(self.__AdjustAttrMaxWidth(attrSlot), newToolTipWidth)
@@ -1776,8 +1776,8 @@ class ItemToolTip(ToolTip):
 		useCount = metinSlot[1]
 		endTime = metinSlot[0]
 		
-		# ÇÑ ¹øÀÌ¶óµµ »ç¿ëÇß´Ù¸é Socket0¿¡ Á¾·á ½Ã°£(2012³â 3¿ù 1ÀÏ 13½Ã 01ºĞ °°Àº..) ÀÌ ¹ÚÇôÀÖÀ½.
-		# »ç¿ëÇÏÁö ¾Ê¾Ò´Ù¸é Socket0¿¡ ÀÌ¿ë°¡´É½Ã°£(ÀÌ¸¦Å×¸é 600 °°Àº °ª. ÃÊ´ÜÀ§)ÀÌ µé¾îÀÖÀ» ¼ö ÀÖ°í, 0ÀÌ¶ó¸é Limit Value¿¡ ÀÖ´Â ÀÌ¿ë°¡´É½Ã°£À» »ç¿ëÇÑ´Ù.
+		# í•œ ë²ˆì´ë¼ë„ ì‚¬ìš©í–ˆë‹¤ë©´ Socket0ì— ì¢…ë£Œ ì‹œê°„(2012ë…„ 3ì›” 1ì¼ 13ì‹œ 01ë¶„ ê°™ì€..) ì´ ë°•í˜€ìˆìŒ.
+		# ì‚¬ìš©í•˜ì§€ ì•Šì•˜ë‹¤ë©´ Socket0ì— ì´ìš©ê°€ëŠ¥ì‹œê°„(ì´ë¥¼í…Œë©´ 600 ê°™ì€ ê°’. ì´ˆë‹¨ìœ„)ì´ ë“¤ì–´ìˆì„ ìˆ˜ ìˆê³ , 0ì´ë¼ë©´ Limit Valueì— ìˆëŠ” ì´ìš©ê°€ëŠ¥ì‹œê°„ì„ ì‚¬ìš©í•œë‹¤.
 		if 0 == useCount:
 			if 0 == endTime:
 				(limitType, limitValue) = item.GetLimit(limitIndex)
@@ -2126,7 +2126,7 @@ class SkillToolTip(ToolTip):
 			if skillLevel < skillMaxLevelEnd:
 				if self.HasSkillLevelDescription(skillIndex, skillLevel+skillLevelUpPoint):
 					self.AppendSpace(5)
-					## HPº¸°­, °üÅëÈ¸ÇÇ º¸Á¶½ºÅ³ÀÇ °æ¿ì
+					## HPë³´ê°•, ê´€í†µíšŒí”¼ ë³´ì¡°ìŠ¤í‚¬ì˜ ê²½ìš°
 					if skillIndex == 141 or skillIndex == 142:
 						self.AppendTextLine(localeInfo.TOOLTIP_NEXT_SKILL_LEVEL_3 % (skillLevel+1), self.DISABLE_COLOR)
 					else:

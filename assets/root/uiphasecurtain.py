@@ -49,11 +49,11 @@ class PhaseCurtain(ui.Bar):
 			if self.curAlpha >= 1.0:
 				self.curAlpha = 1.0
 
-				# ÀÌº¥Æ® Áß°£¿¡ ¸ØÃâ°æ¿ì¸¦ ´ëºñÇØ ¹Ì¸® Á¦°Å
+				# ì´ë²¤íŠ¸ ì¤‘ê°„ì— ë©ˆì¶œê²½ìš°ë¥¼ ëŒ€ë¹„í•´ ë¯¸ë¦¬ ì œê±°
 				event=self.event
 				self.event = 0
 
-				#print "ÆäÀÌµå ¾Æ¿ô ¿Ï·á ÀÌº¥Æ® ½ÇÇà"
+				#print "í˜ì´ë“œ ì•„ì›ƒ ì™„ë£Œ ì´ë²¤íŠ¸ ì‹¤í–‰"
 
 				if -1 != self.args:
 					event(self.args)
