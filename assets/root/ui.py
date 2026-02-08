@@ -196,10 +196,12 @@ class Window(object):
 		return wndMgr.GetWindowRect(self.hWnd)
 
 	def SetPosition(self, x, y):
-		wndMgr.SetWindowPosition(self.hWnd, x, y)
+		wndMgr.SetWindowPosition(self.hWnd, int(x), int(y))
 
 	def SetCenterPosition(self, x = 0, y = 0):
-		self.SetPosition((wndMgr.GetScreenWidth() - self.GetWidth()) / 2 + x, (wndMgr.GetScreenHeight() - self.GetHeight()) / 2 + y)
+		center_x = (wndMgr.GetScreenWidth() - self.GetWidth()) // 2 + int(x)
+		center_y = (wndMgr.GetScreenHeight() - self.GetHeight()) // 2 + int(y)
+		self.SetPosition(center_x, center_y)
 
 	def IsFocus(self):
 		return wndMgr.IsFocus(self.hWnd)
@@ -2375,7 +2377,7 @@ class ListBox(Window):
 		self._LocateItem()
 
 	def GetViewItemCount(self):
-		return int(self.GetHeight() / self.stepSize)
+		return int(self.GetHeight() // self.stepSize)
 
 	def GetItemCount(self):
 		return len(self.itemList)
@@ -2415,7 +2417,7 @@ class ListBox(Window):
 			xMouse, yMouse = wndMgr.GetMousePosition()
 
 			if yMouse - y < height - 1:
-				self.overLine = (yMouse - y) / self.stepSize
+				self.overLine = (yMouse - y) // self.stepSize
 
 				if self.overLine < 0:
 					self.overLine = -1
@@ -2486,8 +2488,8 @@ class ListBox2(ListBox):
 			gx, gy = self.GetGlobalPosition()
 			lx, ly = px - gx, py - gy
 
-			col = lx / self.barWidth
-			row = ly / self.stepSize
+			col = lx // self.barWidth
+			row = ly // self.stepSize
 			idx = col * self.rowCount + row
 			if col >= 0 and col < self.colCount:
 				if row >= 0 and row < self.rowCount:
@@ -2499,7 +2501,7 @@ class ListBox2(ListBox):
 	def _CalcRenderPos(self, pos, idx):
 		x, y = pos
 		row = idx % self.rowCount
-		col = idx / self.rowCount
+		col = idx // self.rowCount
 		return (x + col * self.barWidth, y + row * self.stepSize)
 
 	def _RenderBar(self, basePos, idx):
@@ -2519,12 +2521,12 @@ class ListBox2(ListBox):
 
 	def _RefreshForm(self):
 		if len(self.itemList) % self.rowCount:
-			self.colCount = len(self.itemList) / self.rowCount + 1
+			self.colCount = len(self.itemList) // self.rowCount + 1
 		else:
-			self.colCount = len(self.itemList) / self.rowCount
+			self.colCount = len(self.itemList) // self.rowCount
 
 		if self.colCount:
-			self.barWidth = self.width / self.colCount
+			self.barWidth = self.width // self.colCount
 		else:
 			self.barWidth = self.width
 
@@ -2581,9 +2583,11 @@ class ComboBox(Window):
 		self.listBox = None
 
 	def SetPosition(self, x, y):
-		Window.SetPosition(self, x, y)
-		self.x = x
-		self.y = y
+		ix = int(x)
+		iy = int(y)
+		Window.SetPosition(self, ix, iy)
+		self.x = ix
+		self.y = iy
 		self.__ArrangeListBox()
 
 	def SetSize(self, width, height):

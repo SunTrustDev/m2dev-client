@@ -7,6 +7,7 @@ import _frozen_importlib_external as _bootstrap_external
 import marshal
 import pack
 import __main__
+import re
 
 # Keep import paths deterministic for the embedded runtime.
 sys.path = [p for p in sys.path if isinstance(p, str)]
@@ -59,33 +60,77 @@ class pack_file_iterator(object):
 
 _chr = builtins.chr
 
+_SOURCE_ENCODING_RE = re.compile(br"coding[:=]\s*([-\w.]+)")
+
+def _extract_source_encoding(data):
+	for line in data.splitlines()[:2]:
+		match = _SOURCE_ENCODING_RE.search(line)
+		if not match:
+			continue
+		try:
+			return match.group(1).decode("ascii")
+		except Exception:
+			return None
+	return None
+
+def _decode_pack_text(data):
+	if isinstance(data, str):
+		return data
+
+	if isinstance(data, bytearray):
+		data = bytes(data)
+	elif not isinstance(data, bytes):
+		data = bytes(data)
+
+	encodings = []
+	source_encoding = _extract_source_encoding(data)
+	if source_encoding:
+		encodings.append(source_encoding)
+	encodings.extend(("utf-8-sig", "cp949", "latin-1"))
+
+	seen = set()
+	for encoding in encodings:
+		if encoding in seen:
+			continue
+		seen.add(encoding)
+		try:
+			return data.decode(encoding)
+		except (LookupError, UnicodeDecodeError):
+			pass
+
+	return data.decode("utf-8", "replace")
+
 class pack_file(object):
 
 	def __init__(self, filename, mode = 'rb'):
 		assert mode in ('r', 'rb')
 		if not pack.Exist(filename):
 			raise IOError('No file or directory')
+		self.mode = mode
 		self.data = pack.Get(filename)
 		if mode == 'r':
-			self.data=_chr(10).join(self.data.split(_chr(13)+_chr(10)))
+			self.data = _decode_pack_text(self.data)
+			self.data = self.data.replace(_chr(13) + _chr(10), _chr(10)).replace(_chr(13), _chr(10))
 
 	def __iter__(self):
 		return pack_file_iterator(self)
 
 	def read(self, length = None):
+		empty = b'' if self.mode == 'rb' else ''
 		if not self.data:
-			return ''
+			return empty
 		if length:
 			tmp = self.data[:length]
 			self.data = self.data[length:]
 			return tmp
 		else:
 			tmp = self.data
-			self.data = ''
+			self.data = b'' if self.mode == 'rb' else ''
 			return tmp
 
 	def readline(self):
-		return self.read(self.data.find(_chr(10))+1)
+		newline = b'\n' if self.mode == 'rb' else _chr(10)
+		return self.read(self.data.find(newline)+1)
 
 	def readlines(self):
 		return [x for x in self]
@@ -293,7 +338,10 @@ def ShowException(excTitle):
 
 def RunMainScript(name):
 	try:		
-		exec(compile(open(name, "rb").read(), name, 'exec'), __main__.__dict__)
+		source = open(name, "rb").read()
+		if isinstance(source, (bytes, bytearray)):
+			source = _decode_pack_text(source)
+		exec(compile(source, name, 'exec'), __main__.__dict__)
 	except RuntimeError as msg:
 		msg = str(msg)
 
